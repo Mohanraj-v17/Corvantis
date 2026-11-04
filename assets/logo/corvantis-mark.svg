@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- CORVANTIS C-V Architectural Monogram -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#C5A46D" />
+      <stop offset="100%" stop-color="#A2834E" />
+    </linearGradient>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3E62" />
+      <stop offset="100%" stop-color="#142B45" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Architectural C (Governance, Stability, Defense) -->
+  <path d="M34 10H18C13.5817 10 10 13.5817 10 18V30C10 34.4183 13.5817 38 18 38H34" 
+        stroke="url(#navyGrad)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        class="logo-navy-stroke" />
+  
+  <!-- Interlocking Golden V (Vigilance, Value, Ascending Leadership) -->
+  <path d="M22 14L31 34L40 14" 
+        stroke="url(#goldGrad)" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Central Governance Keystone Diamond Point -->
+  <circle cx="31" cy="20" r="2.2" fill="url(#goldGrad)" />
+</svg>

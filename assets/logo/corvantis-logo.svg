@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" width="280" height="48" fill="none">
+  <defs>
+    <linearGradient id="fullGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#C5A46D" />
+      <stop offset="100%" stop-color="#A2834E" />
+    </linearGradient>
+    <linearGradient id="fullNavyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#203F5E" />
+      <stop offset="100%" stop-color="#142B45" />
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram Mark -->
+  <g transform="translate(2, 0)">
+    <!-- Architectural C -->
+    <path d="M30 10H16C12.134 10 9 13.134 9 17V31C9 34.866 12.134 38 16 38H30" 
+          stroke="url(#fullNavyGrad)" 
+          stroke-width="4" 
+          stroke-linecap="round" 
+          class="logo-stroke-navy" />
+    
+    <!-- Golden Chevron V -->
+    <path d="M20 14L28 34L36 14" 
+          stroke="url(#fullGoldGrad)" 
+          stroke-width="4" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Keystone Diamond -->
+    <circle cx="28" cy="20" r="2" fill="url(#fullGoldGrad)" />
+  </g>
+
+  <!-- Typography Brand Name -->
+  <text x="54" y="26" 
+        font-family="'Playfair Display', Georgia, serif" 
+        font-size="21" 
+        font-weight="700" 
+        letter-spacing="2.5" 
+        fill="#142B45" 
+        class="logo-text-primary">CORVANTIS</text>
+
+  <!-- Tagline Subtitle -->
+  <text x="55" y="38" 
+        font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" 
+        font-size="7" 
+        font-weight="600" 
+        letter-spacing="1.8" 
+        fill="#C5A46D" 
+        class="logo-text-accent">CORPORATE GOVERNANCE &amp; COMPLIANCE ADVISORY</text>
+</svg>

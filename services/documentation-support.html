@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation Support & Policy Codification | CORVANTIS Advisory</title>
+  <meta name="description" content="Enterprise policy codification, standard operating procedure (SOP) development, delegation of authority matrices, and centralized digital records governance.">
+  
+  <!-- Immediate Theme & Direction Initialization to Prevent Flash of Wrong Content -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('corvantis_theme') || 'light';
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const savedDir = localStorage.getItem('corvantis_dir') || localStorage.getItem('corvantis_direction') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+      document.documentElement.dir = savedDir;
+      document.documentElement.setAttribute('lang', savedDir === 'rtl' ? 'ar' : 'en');
+    })();
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#142B45',
+              dark: '#101820',
+              surface: '#182430',
+              gold: '#C5A46D',
+              goldHover: '#B59359',
+              lightGray: '#F8F9FA',
+              borderLight: '#E2E8F0',
+              borderDark: '#344454',
+              textMuted: '#718096',
+              textMutedDark: '#A5B1BE'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts: Inter & Playfair Display (Original CORVANTIS Brand Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-white dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] font-sans antialiased selection:bg-[#C5A46D] selection:text-white transition-colors duration-200">
+
+  <!-- COMMON NAVBAR (Injected dynamically from navbar.html via JS) -->
+  <div id="navbar-placeholder"></div>
+
+  <main id="main-content">
+    
+    <!-- ==========================================
+         BREADCRUMB BAR
+         ========================================== -->
+    <nav class="bg-[#F8F9FA] dark:bg-[#141E28] border-b border-[#E2E8F0] dark:border-[#344454] py-3 text-xs" aria-label="Breadcrumb">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-[#718096] dark:text-[#A5B1BE]">
+        <a href="../index.html" class="hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors flex items-center gap-1">
+          <i data-lucide="home" class="w-3.5 h-3.5"></i>
+          <span>Home</span>
+        </a>
+        <i data-lucide="chevron-right" class="w-3 h-3 text-[#A5B1BE] rtl-flip"></i>
+        <a href="../services.html" class="hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors">Services</a>
+        <i data-lucide="chevron-right" class="w-3 h-3 text-[#A5B1BE] rtl-flip"></i>
+        <span class="text-[#C5A46D] font-semibold truncate">Documentation Support & Policy Codification</span>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+         SECTION 1: HERO
+         ========================================== -->
+    <section class="relative py-20 lg:py-28 bg-[#142B45] text-white overflow-hidden" aria-label="Service Hero">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#C5A46D]/20 via-[#142B45]/70 to-[#101820] pointer-events-none"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-[#C5A46D]/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-8 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A46D]/20 border border-[#C5A46D]/40 text-[#F8F5EE]">
+              <i data-lucide="file-check-2" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
+              <span class="text-xs uppercase tracking-widest font-semibold">Compliance & Audit Practice</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.18]">
+              Transforming Institutional Knowledge Into Defensible Policy Architecture.
+            </h1>
+
+            <p class="text-base sm:text-lg text-[#F3F5F7]/85 max-w-2xl leading-relaxed font-light">
+              We guide corporations in codifying unambiguous corporate policies, Standard Operating Procedures (SOPs), and digital evidence vaults that anchor compliance and operational consistency.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-3">
+              <a href="../contact.html" class="btn-gold text-xs uppercase tracking-wider py-3.5 px-7">
+                <span>Schedule Consultation</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 rtl-flip"></i>
+              </a>
+              <a href="#framework" class="btn-outline text-white border-white/40 hover:border-[#C5A46D] hover:text-[#C5A46D] hover:bg-[#C5A46D]/10 text-xs uppercase tracking-wider py-3.5 px-6">
+                <span>Explore Advisory Framework</span>
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Metrics Card -->
+          <div class="lg:col-span-4">
+            <div class="p-6 sm:p-7 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl space-y-6">
+              <div class="border-b border-white/10 pb-4">
+                <span class="text-xs uppercase tracking-widest text-[#C5A46D] font-bold block mb-1">Advisory Benchmark</span>
+                <h3 class="font-serif text-lg font-bold text-white">Proven Practice Impact</h3>
+              </div>
+              <div class="grid grid-cols-1 gap-4">
+                
+                <div class="p-3.5 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
+                  <div>
+                    <div class="text-2xl font-serif font-bold text-[#C5A46D]">100%</div>
+                    <div class="text-xs text-[#F3F5F7]/80">Audit-Proof Policy Governance</div>
+                  </div>
+                  <i data-lucide="file-check" class="w-5 h-5 text-[#C5A46D]/80"></i>
+                </div>
+                
+                <div class="p-3.5 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
+                  <div>
+                    <div class="text-2xl font-serif font-bold text-[#C5A46D]">250+</div>
+                    <div class="text-xs text-[#F3F5F7]/80">Enterprise SOPs & Policies Codified</div>
+                  </div>
+                  <i data-lucide="book" class="w-5 h-5 text-[#C5A46D]/80"></i>
+                </div>
+                
+                <div class="p-3.5 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between">
+                  <div>
+                    <div class="text-2xl font-serif font-bold text-[#C5A46D]">65%</div>
+                    <div class="text-xs text-[#F3F5F7]/80">Reduction in Policy Search Time</div>
+                  </div>
+                  <i data-lucide="search" class="w-5 h-5 text-[#C5A46D]/80"></i>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: CORE OVERVIEW & STRATEGIC SIGNIFICANCE
+         ========================================== -->
+    <section class="py-20 sm:py-24 bg-white dark:bg-[#101820] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Practice Overview">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          <div class="lg:col-span-7 space-y-6 text-left rtl:text-right">
+            <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#C5A46D] font-bold">
+              <span class="w-2 h-2 rounded-full bg-[#C5A46D]"></span>
+              <span>Overview &amp; Fiduciary Rationale</span>
+            </div>
+            
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#142B45] dark:text-[#F3F5F7] leading-tight">
+              Codifying Operating Discipline and Preserving Institutional Capital
+            </h2>
+
+            <p class="text-base text-[#253448] dark:text-[#E2E8F0] font-medium leading-relaxed">
+              An organization’s governance integrity is only as strong as its documented operational procedures. Undocumented processes invite human error, regulatory sanctions, and intellectual capital loss.
+            </p>
+
+            
+            <p class="text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              As organizations grow, acquire new subsidiaries, or navigate personnel turnover, vital institutional knowledge often remains trapped in the heads of key individuals or buried in obsolete email threads. When regulatory examiners or statutory auditors request documented evidence of operational controls, vague verbal descriptions are rejected.
+            </p>
+            
+            <p class="text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              CORVANTIS delivers end-to-end Documentation Support and Policy Codification. Our specialists partner with business unit heads to document critical operational workflows, standardize enterprise policies, harmonize delegation matrices, and establish centralized digital documentation repositories that ensure clarity, compliance, and continuity.
+            </p>
+            
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="p-6 sm:p-8 rounded-2xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm space-y-5">
+              <h3 class="font-serif text-lg font-bold text-[#142B45] dark:text-[#F3F5F7] border-b border-[#E2E8F0] dark:border-[#344454] pb-3">
+                Core Advisory Commitments
+              </h3>
+              <ul class="space-y-4">
+                
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7]">Standardized Policy Architecture</h4>
+                    <p class="text-xs text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-normal">Creating a unified hierarchy of enterprise policies, standards, procedures, and job aids.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7]">Process Flow & SOP Codification</h4>
+                    <p class="text-xs text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-normal">Drafting clear, step-by-step operating manuals with embedded risk controls and sign-off checkpoints.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7]">Delegation of Authority (DoA) Matrices</h4>
+                    <p class="text-xs text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-normal">Defining clear financial and operational approval tiers across parent companies and regional subsidiaries.</p>
+                  </div>
+                </li>
+                
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 rounded-full bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7]">Lifecycle Document Governance</h4>
+                    <p class="text-xs text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-normal">Instituting version control, mandatory annual review cadences, and compliant archiving protocols.</p>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: COMMON ORGANIZATIONAL CHALLENGES (Equal Height Cards)
+         ========================================== -->
+    <section class="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#141E28] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Key Challenges">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#C5A46D] font-bold">
+            <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+            <span>Vulnerabilities &amp; Roadblocks</span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#142B45] dark:text-[#F3F5F7]">
+            Pervasive Documentation Deficits That Undermine Governance
+          </h2>
+          <p class="text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+            Organizations lacking structured documentation management face acute vulnerabilities during audits and operational scaling.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+          
+          <div class="challenge-card p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors flex flex-col justify-start h-full">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center font-bold text-xs">
+                01
+              </span>
+              <i data-lucide="clock" class="w-5 h-5 text-[#C5A46D]"></i>
+            </div>
+            <h3 class="challenge-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2 min-h-[2.75rem] flex items-center leading-snug">Outdated & Decayed Policies</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Corporate policy manuals that have not been revised in years, bearing references to obsolete laws and legacy systems.</p>
+          </div>
+          
+          <div class="challenge-card p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors flex flex-col justify-start h-full">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center font-bold text-xs">
+                02
+              </span>
+              <i data-lucide="shuffle" class="w-5 h-5 text-[#C5A46D]"></i>
+            </div>
+            <h3 class="challenge-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2 min-h-[2.75rem] flex items-center leading-snug">Inconsistent Operational Workflows</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Different business units executing identical tasks with conflicting procedures, leading to quality variance.</p>
+          </div>
+          
+          <div class="challenge-card p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors flex flex-col justify-start h-full">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center font-bold text-xs">
+                03
+              </span>
+              <i data-lucide="user-minus" class="w-5 h-5 text-[#C5A46D]"></i>
+            </div>
+            <h3 class="challenge-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2 min-h-[2.75rem] flex items-center leading-snug">Intellectual Capital Drain</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Departing senior personnel taking critical operational procedures with them due to unwritten practices.</p>
+          </div>
+          
+          <div class="challenge-card p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors flex flex-col justify-start h-full">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center font-bold text-xs">
+                04
+              </span>
+              <i data-lucide="search-x" class="w-5 h-5 text-[#C5A46D]"></i>
+            </div>
+            <h3 class="challenge-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2 min-h-[2.75rem] flex items-center leading-snug">Dispersed Digital Storage</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Critical compliance records scattered across personal drives, local desktops, and third-party cloud apps.</p>
+          </div>
+          
+          <div class="challenge-card p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors flex flex-col justify-start h-full">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center font-bold text-xs">
+                05
+              </span>
+              <i data-lucide="slash" class="w-5 h-5 text-[#C5A46D]"></i>
+            </div>
+            <h3 class="challenge-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2 min-h-[2.75rem] flex items-center leading-snug">Contradictory Authority Limits</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Unclear delegation guidelines resulting in unauthorized commitments or unnecessary executive approval delays.</p>
+          </div>
+          
+          <div class="challenge-card p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors flex flex-col justify-start h-full">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-8 h-8 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center font-bold text-xs">
+                06
+              </span>
+              <i data-lucide="file-minus" class="w-5 h-5 text-[#C5A46D]"></i>
+            </div>
+            <h3 class="challenge-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2 min-h-[2.75rem] flex items-center leading-snug">Audit Failure Due to Missing Evidence</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Inability to produce signed, dated procedural acknowledgments during statutory compliance inspections.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: STRUCTURED ADVISORY FRAMEWORK (Pixel-Perfect Equal Divider Line)
+         ========================================== -->
+    <section id="framework" class="py-20 sm:py-24 bg-white dark:bg-[#101820] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Methodology">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#C5A46D] font-bold">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            <span>Systematic Methodology</span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#142B45] dark:text-[#F3F5F7]">
+            The CORVANTIS Policy & Documentation Architecture
+          </h2>
+          <p class="text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+            A methodical four-phase codification model designed to produce clear, compliant, and user-friendly documentation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          
+          <div class="phase-card relative p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-between h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors shadow-sm">
+            <div class="phase-card-body flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-[#142B45] text-white dark:bg-[#C5A46D] dark:text-[#101820]">
+                  Phase 01
+                </span>
+                <i data-lucide="scan" class="w-5 h-5 text-[#C5A46D]"></i>
+              </div>
+              <h3 class="phase-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2.5 min-h-[3rem] flex items-center leading-snug">Documentation Inventory & Audit</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Cataloging all existing policies, manuals, SOPs, and informal memos to identify gaps, overlaps, and expired content.</p>
+            </div>
+            <div class="phase-card-footer mt-auto pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[11px] font-semibold text-[#C5A46D] h-14 min-h-[3.5rem] max-h-[3.5rem] flex items-center leading-snug">
+              <span>Deliverable: Policy Portfolio Health Diagnostic</span>
+            </div>
+          </div>
+          
+          <div class="phase-card relative p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-between h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors shadow-sm">
+            <div class="phase-card-body flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-[#142B45] text-white dark:bg-[#C5A46D] dark:text-[#101820]">
+                  Phase 02
+                </span>
+                <i data-lucide="git-branch" class="w-5 h-5 text-[#C5A46D]"></i>
+              </div>
+              <h3 class="phase-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2.5 min-h-[3rem] flex items-center leading-snug">Process Mapping & Workflow Capture</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Conducting structured interviews with process owners to map end-to-end workflows and critical control points.</p>
+            </div>
+            <div class="phase-card-footer mt-auto pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[11px] font-semibold text-[#C5A46D] h-14 min-h-[3.5rem] max-h-[3.5rem] flex items-center leading-snug">
+              <span>Deliverable: Validated Process Flow Blueprints</span>
+            </div>
+          </div>
+          
+          <div class="phase-card relative p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-between h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors shadow-sm">
+            <div class="phase-card-body flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-[#142B45] text-white dark:bg-[#C5A46D] dark:text-[#101820]">
+                  Phase 03
+                </span>
+                <i data-lucide="pen-tool" class="w-5 h-5 text-[#C5A46D]"></i>
+              </div>
+              <h3 class="phase-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2.5 min-h-[3rem] flex items-center leading-snug">Standardization & Drafting</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Authoring clean, accessible policies and SOPs using unified corporate templates and plain-language standards.</p>
+            </div>
+            <div class="phase-card-footer mt-auto pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[11px] font-semibold text-[#C5A46D] h-14 min-h-[3.5rem] max-h-[3.5rem] flex items-center leading-snug">
+              <span>Deliverable: Standard Operating Procedures Library</span>
+            </div>
+          </div>
+          
+          <div class="phase-card relative p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-between h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors shadow-sm">
+            <div class="phase-card-body flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-[#142B45] text-white dark:bg-[#C5A46D] dark:text-[#101820]">
+                  Phase 04
+                </span>
+                <i data-lucide="archive" class="w-5 h-5 text-[#C5A46D]"></i>
+              </div>
+              <h3 class="phase-card-title font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2.5 min-h-[3rem] flex items-center leading-snug">Repository & Governance Rollout</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Deploying centralized digital policy portals with automated review triggers and employee acknowledgment tracking.</p>
+            </div>
+            <div class="phase-card-footer mt-auto pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[11px] font-semibold text-[#C5A46D] h-14 min-h-[3.5rem] max-h-[3.5rem] flex items-center leading-snug">
+              <span>Deliverable: Centralized Policy Governance Portal</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: SPECIFIC DELIVERABLES & CORE PILLARS (Pixel-Perfect Equal Divider Line)
+         ========================================== -->
+    <section class="py-20 sm:py-24 bg-[#F8F9FA] dark:bg-[#141E28] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Key Deliverables">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#C5A46D] font-bold">
+            <i data-lucide="package-check" class="w-3.5 h-3.5"></i>
+            <span>Engagement Outputs</span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#142B45] dark:text-[#F3F5F7]">
+            Documentation Solutions & Core Deliverables
+          </h2>
+          <p class="text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+            Turnkey governance documents crafted to elevate operational rigor and satisfy audit inquiries.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+          
+          <div class="pillar-card p-7 rounded-2xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm flex flex-col justify-between h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors">
+            <div class="pillar-card-body flex-1 flex flex-col">
+              <div class="w-10 h-10 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-5">
+                <i data-lucide="book" class="w-5 h-5"></i>
+              </div>
+              <h3 class="pillar-card-title font-serif text-lg font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2.5 min-h-[2.75rem] flex items-center leading-snug">Master Corporate Policy Manuals</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed mb-6 flex-1">Comprehensive policy frameworks covering ethics, anti-bribery, information security, and financial management.</p>
+            </div>
+            <ul class="pillar-card-footer space-y-2.5 pt-4 border-t border-[#E2E8F0] dark:border-[#344454] mt-auto">
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Corporate Code of Conduct</span>
+              </li>
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Information Security & Privacy Policies</span>
+              </li>
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Financial Control & Accounting Policies</span>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="pillar-card p-7 rounded-2xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm flex flex-col justify-between h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors">
+            <div class="pillar-card-body flex-1 flex flex-col">
+              <div class="w-10 h-10 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-5">
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+              </div>
+              <h3 class="pillar-card-title font-serif text-lg font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2.5 min-h-[2.75rem] flex items-center leading-snug">Standard Operating Procedures (SOPs)</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed mb-6 flex-1">Step-by-step procedure documents detailing operational execution, supervisory sign-offs, and risk controls.</p>
+            </div>
+            <ul class="pillar-card-footer space-y-2.5 pt-4 border-t border-[#E2E8F0] dark:border-[#344454] mt-auto">
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Operational Workflow Blueprints</span>
+              </li>
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Control Verification Checklists</span>
+              </li>
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Exception Escalation Protocols</span>
+              </li>
+              
+            </ul>
+          </div>
+          
+          <div class="pillar-card p-7 rounded-2xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm flex flex-col justify-between h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors">
+            <div class="pillar-card-body flex-1 flex flex-col">
+              <div class="w-10 h-10 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-5">
+                <i data-lucide="grid" class="w-5 h-5"></i>
+              </div>
+              <h3 class="pillar-card-title font-serif text-lg font-bold text-[#142B45] dark:text-[#F3F5F7] mb-2.5 min-h-[2.75rem] flex items-center leading-snug">Delegations of Authority (DoA)</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed mb-6 flex-1">Clear, multi-tiered financial and operational approval schedules establishing exact spending and contract authority.</p>
+            </div>
+            <ul class="pillar-card-footer space-y-2.5 pt-4 border-t border-[#E2E8F0] dark:border-[#344454] mt-auto">
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Capital Expenditure Approval Tiers</span>
+              </li>
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Contract Signing Authority Schedules</span>
+              </li>
+              
+              <li class="flex items-center gap-2 text-xs text-[#253448] dark:text-[#F3F5F7]">
+                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#C5A46D] shrink-0"></i>
+                <span>Subsidiary Board Delegation Limits</span>
+              </li>
+              
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: QUANTIFIABLE BENEFITS & OUTCOMES
+         ========================================== -->
+    <section class="py-20 sm:py-24 bg-white dark:bg-[#101820] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Measurable Benefits">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#C5A46D] font-bold">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
+              <span>Value Creation</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-[#142B45] dark:text-[#F3F5F7] leading-tight">
+              Strategic Benefits of Defensible Documentation
+            </h2>
+            <p class="text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              Protecting organizational memory and establishing an unshakeable foundation for compliance.
+            </p>
+            <div class="pt-2">
+              <a href="../contact.html" class="btn-gold text-xs uppercase tracking-wider py-3 px-6">
+                <span>Request Case Study Data</span>
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 items-stretch">
+            
+            <div class="p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-start h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors">
+              <div class="w-8 h-8 rounded-md bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-3">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-serif text-sm font-bold text-[#142B45] dark:text-[#F3F5F7] mb-1.5 min-h-[2rem] flex items-center">Audit-Proof Assurance</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Present external auditors and regulators with immaculate, indexed procedural documentation on demand.</p>
+            </div>
+            
+            <div class="p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-start h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors">
+              <div class="w-8 h-8 rounded-md bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-3">
+                <i data-lucide="users" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-serif text-sm font-bold text-[#142B45] dark:text-[#F3F5F7] mb-1.5 min-h-[2rem] flex items-center">Rapid Employee Onboarding</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Accelerate new hire productivity by providing unambiguous, well-documented operating procedures.</p>
+            </div>
+            
+            <div class="p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-start h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors">
+              <div class="w-8 h-8 rounded-md bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-3">
+                <i data-lucide="copy-check" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-serif text-sm font-bold text-[#142B45] dark:text-[#F3F5F7] mb-1.5 min-h-[2rem] flex items-center">Consistent Execution Quality</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Standardize operational performance across geographically dispersed business units and remote teams.</p>
+            </div>
+            
+            <div class="p-6 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] flex flex-col justify-start h-full hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors">
+              <div class="w-8 h-8 rounded-md bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-3">
+                <i data-lucide="lock" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-serif text-sm font-bold text-[#142B45] dark:text-[#F3F5F7] mb-1.5 min-h-[2rem] flex items-center">Institutional Resilience</h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed flex-1">Safeguard vital proprietary knowledge and ensure seamless business continuity through executive turnover.</p>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         RELATED SERVICES NAVIGATION (Equal Height Cards & Aligned Footers)
+         ========================================== -->
+    <section class="py-16 bg-[#F8F9FA] dark:bg-[#141E28] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Related Practices">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+          <div>
+            <h3 class="font-serif text-xl font-bold text-[#142B45] dark:text-[#F3F5F7]">Related Advisory Practices</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] mt-1">Explore complementary corporate governance and compliance capabilities.</p>
+          </div>
+          <a href="../services.html" class="text-xs font-bold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1 uppercase tracking-wider">
+            <span>All Services</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          
+          <a href="regulatory-compliance.html" class="group p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors shadow-sm flex flex-col justify-between h-full">
+            <div class="flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-[#C5A46D]">Compliance & Audit</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#718096] group-hover:text-[#C5A46D] transition-colors rtl-flip"></i>
+              </div>
+              <h4 class="font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover:text-[#C5A46D] transition-colors mb-2 min-h-[2.5rem] flex items-center">Regulatory Compliance</h4>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">Statutory obligation mapping, horizon scanning, and compliance frameworks.</p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-[#E2E8F0]/80 dark:border-[#344454]/80 flex items-center justify-between text-[11px] font-semibold text-[#C5A46D]">
+              <span>Explore Practice</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+            </div>
+          </a>
+          
+          <a href="audit-preparation.html" class="group p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors shadow-sm flex flex-col justify-between h-full">
+            <div class="flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-[#C5A46D]">Compliance & Audit</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#718096] group-hover:text-[#C5A46D] transition-colors rtl-flip"></i>
+              </div>
+              <h4 class="font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover:text-[#C5A46D] transition-colors mb-2 min-h-[2.5rem] flex items-center">Audit Preparation</h4>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">Pre-audit testing, digital evidence vaults, and readiness sprints.</p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-[#E2E8F0]/80 dark:border-[#344454]/80 flex items-center justify-between text-[11px] font-semibold text-[#C5A46D]">
+              <span>Explore Practice</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+            </div>
+          </a>
+          
+          <a href="business-advisory.html" class="group p-6 rounded-xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] hover:border-[#C5A46D] dark:hover:border-[#C5A46D] transition-colors shadow-sm flex flex-col justify-between h-full">
+            <div class="flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] uppercase font-bold tracking-widest text-[#C5A46D]">Risk & Advisory</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#718096] group-hover:text-[#C5A46D] transition-colors rtl-flip"></i>
+              </div>
+              <h4 class="font-serif text-base font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover:text-[#C5A46D] transition-colors mb-2 min-h-[2.5rem] flex items-center">Business Advisory</h4>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">Operational excellence, transformation, and capability development.</p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-[#E2E8F0]/80 dark:border-[#344454]/80 flex items-center justify-between text-[11px] font-semibold text-[#C5A46D]">
+              <span>Explore Practice</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+            </div>
+          </a>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: CONSULTATION CALL-TO-ACTION
+         ========================================== -->
+    <section class="relative py-20 sm:py-24 bg-[#142B45] text-white overflow-hidden" aria-label="Consultation CTA">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-[#C5A46D]/20 via-transparent to-transparent pointer-events-none"></div>
+      
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A46D]/20 border border-[#C5A46D]/40">
+          <i data-lucide="compass" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
+          <span class="text-xs uppercase tracking-widest text-[#F8F5EE] font-semibold">Senior Advisory Engagement</span>
+        </div>
+
+        <h2 class="hero-heading font-serif font-bold text-white">
+          Codify and Protect Your Enterprise Operating Procedures.
+        </h2>
+
+        <p class="text-base sm:text-lg text-[#F3F5F7]/85 max-w-2xl mx-auto leading-relaxed font-light">
+          Partner with our Documentation Support Practice to conduct a comprehensive policy audit and build an accessible, compliant operating procedure repository.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="../contact.html" class="btn-gold text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
+            <span>Schedule Confidential Briefing</span>
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+          </a>
+          <a href="../services.html" class="btn-outline text-white border-white/40 hover:border-[#C5A46D] hover:text-[#C5A46D] hover:bg-[#C5A46D]/10 text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
+            <span>View All Practices</span>
+            <i data-lucide="grid" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COMMON FOOTER (Injected dynamically from footer.html via JS) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Global Scripts -->
+  <script src="../js/theme.js"></script>
+  <script src="../js/direction.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/validation.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

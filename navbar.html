@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CORVANTIS Global Navbar</title>
+</head>
+<body>
+<!-- ==========================================
+     CORVANTIS GLOBAL NAVBAR COMPONENT
+     Reusable across all pages via JavaScript.
+     Sticky, Premium, Brand Consistent, Home Dropdown.
+     ========================================== -->
+<header class="navbar-sticky">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- LEFT: Custom SVG Logo & Brand Typography (Matching Footer Logo & Proportions) -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C5A46D] rounded-sm" aria-label="CORVANTIS Home">
+        <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M34 10H18C13.5817 10 10 13.5817 10 18V30C10 34.4183 13.5817 38 18 38H34" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" class="text-[#142B45] dark:text-[#F3F5F7]" />
+          <path d="M22 14L31 34L40 14" stroke="#C5A46D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle cx="31" cy="20" r="2.2" fill="#C5A46D" />
+        </svg>
+        <span class="brand-name font-serif text-xl font-bold tracking-[0.16em] text-[#142B45] dark:text-[#F3F5F7] leading-none">CORVANTIS</span>
+      </a>
+
+      <!-- CENTER: Navigation Links (With Home Dropdown) - Full Desktop (>= 1280px) -->
+      <nav class="hidden xl:flex items-center space-x-7 rtl:space-x-reverse" aria-label="Main Navigation">
+        <!-- HOME DROPDOWN -->
+        <div class="relative dropdown-container" id="home-dropdown-container">
+          <button type="button" 
+                  id="home-dropdown-toggle"
+                  class="nav-link text-sm font-medium tracking-wide inline-flex items-center gap-1.5 focus:outline-none cursor-pointer"
+                  aria-expanded="false" 
+                  aria-haspopup="true"
+                  aria-controls="home-dropdown-menu">
+            <span>Home</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 dropdown-arrow"></i>
+          </button>
+          
+          <div id="home-dropdown-menu" 
+               class="dropdown-menu absolute top-full left-0 rtl:left-auto rtl:right-0 pt-2 w-64 opacity-0 invisible translate-y-2 transition-all duration-200 z-50 pointer-events-none"
+               role="menu"
+               aria-labelledby="home-dropdown-toggle">
+            <div class="py-2 bg-white dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] rounded-lg shadow-xl overflow-hidden">
+              <a href="index.html" class="dropdown-item flex items-center justify-between px-4 py-2.5 text-xs font-semibold text-[#253448] dark:text-[#F3F5F7] hover:bg-[#F4F6F8] dark:hover:bg-[#182430] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors" role="menuitem">
+                <div class="flex flex-col text-left rtl:text-right">
+                  <span>Home 1</span>
+                  <span class="text-[10px] text-[#718096] dark:text-[#A5B1BE] font-normal">Traditional Corporate Advisory</span>
+                </div>
+                <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#C5A46D]/15 text-[#C5A46D] font-bold">Classic</span>
+              </a>
+              <div class="border-t border-[#E2E8F0] dark:border-[#344454]/60 my-1"></div>
+              <a href="home-2.html" class="dropdown-item flex items-center justify-between px-4 py-2.5 text-xs font-semibold text-[#253448] dark:text-[#F3F5F7] hover:bg-[#F4F6F8] dark:hover:bg-[#182430] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors" role="menuitem">
+                <div class="flex flex-col text-left rtl:text-right">
+                  <span>Home 2</span>
+                  <span class="text-[10px] text-[#718096] dark:text-[#A5B1BE] font-normal">Modern Editorial Layout</span>
+                </div>
+                <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold">Editorial</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link text-sm font-medium tracking-wide">About Us</a>
+
+        <!-- SERVICES 3-COLUMN MEGA MENU DROPDOWN -->
+        <div class="relative dropdown-container" id="services-dropdown-container">
+          <button type="button" 
+                  id="services-dropdown-toggle"
+                  class="nav-link text-sm font-medium tracking-wide inline-flex items-center gap-1.5 focus:outline-none cursor-pointer"
+                  aria-expanded="false" 
+                  aria-haspopup="true"
+                  aria-controls="services-dropdown-menu">
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 dropdown-arrow"></i>
+          </button>
+          
+          <div id="services-dropdown-menu" 
+               class="mega-menu absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[880px] lg:w-[960px] opacity-0 invisible translate-y-2 transition-all duration-200 z-50 pointer-events-none"
+               role="menu"
+               aria-labelledby="services-dropdown-toggle">
+            <div class="bg-white dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] rounded-2xl shadow-2xl p-6 sm:p-7 overflow-hidden">
+              
+              <!-- Top Header Bar of Mega Menu -->
+              <div class="flex items-center justify-between pb-4 mb-5 border-b border-[#E2E8F0] dark:border-[#344454]/60">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[#C5A46D]"></span>
+                  <span class="text-xs uppercase font-bold tracking-[0.16em] text-[#142B45] dark:text-[#F3F5F7]">Specialized Advisory Practices</span>
+                </div>
+                <a href="services.html" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1 uppercase tracking-wider transition-colors">
+                  <span>Explore Full Directory</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+                </a>
+              </div>
+
+              <!-- 3 Equal Columns with Vertical Dividers -->
+              <div class="grid grid-cols-3 gap-6 divide-x divide-[#E2E8F0] dark:divide-[#344454]/60 rtl:divide-x-reverse text-left rtl:text-right">
+                
+                <!-- Column 1: Governance & Board -->
+                <div class="pr-4 rtl:pr-0 rtl:pl-4 space-y-2.5">
+                  <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C5A46D] mb-3">
+                    <i data-lucide="landmark" class="w-4 h-4"></i>
+                    <span>Governance &amp; Board</span>
+                  </div>
+                  
+                  <a href="services/corporate-governance.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Corporate Governance</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Framework design, fiduciary policies &amp; accountability.</p>
+                  </a>
+
+                  <a href="services/board-governance.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Board Governance</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Composition, committee charters &amp; board meetings.</p>
+                  </a>
+
+                  <a href="services/board-effectiveness.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Board Effectiveness</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Performance reviews, dynamics &amp; decision-making.</p>
+                  </a>
+
+                  <a href="services/leadership-advisory.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Leadership Advisory</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Executive succession, stewardship &amp; accountability.</p>
+                  </a>
+                </div>
+
+                <!-- Column 2: Compliance & Audit -->
+                <div class="px-4 space-y-2.5">
+                  <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C5A46D] mb-3">
+                    <i data-lucide="file-check-2" class="w-4 h-4"></i>
+                    <span>Compliance &amp; Audit</span>
+                  </div>
+
+                  <a href="services/regulatory-compliance.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Regulatory Compliance</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Cross-border statutory mapping &amp; surveillance.</p>
+                  </a>
+
+                  <a href="services/audit-preparation.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Audit Preparation</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Pre-audit testing, gap remediation &amp; readiness sprints.</p>
+                  </a>
+
+                  <a href="services/compliance-reporting.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Compliance Reporting</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Statutory disclosures, data management &amp; filings.</p>
+                  </a>
+
+                  <a href="services/documentation-support.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Documentation Support</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Policy manuals, evidentiary vaults &amp; records control.</p>
+                  </a>
+                </div>
+
+                <!-- Column 3: Risk & Advisory -->
+                <div class="pl-4 rtl:pl-0 rtl:pr-4 space-y-2.5">
+                  <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C5A46D] mb-3">
+                    <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                    <span>Risk &amp; Advisory</span>
+                  </div>
+
+                  <a href="services/risk-management.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Risk Management</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Enterprise risk assessments, mitigation &amp; monitoring.</p>
+                  </a>
+
+                  <a href="services/internal-audit.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Internal Audit</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Control reviews, process audits &amp; remediation tracking.</p>
+                  </a>
+
+                  <a href="services/business-advisory.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Business Advisory</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Operational improvement, transformation &amp; capability.</p>
+                  </a>
+
+                  <a href="services/strategic-advisory.html" class="group/item block p-2.5 rounded-lg hover:bg-[#F4F6F8] dark:hover:bg-[#182430] transition-colors">
+                    <div class="text-xs font-bold text-[#142B45] dark:text-[#F3F5F7] group-hover/item:text-[#C5A46D] transition-colors flex items-center justify-between">
+                      <span>Strategic Advisory</span>
+                      <i data-lucide="chevron-right" class="w-3 h-3 text-[#C5A46D] opacity-0 group-hover/item:opacity-100 transition-opacity rtl-flip"></i>
+                    </div>
+                    <p class="text-[11px] text-[#718096] dark:text-[#A5B1BE] mt-0.5 leading-snug">Corporate strategy, transaction due diligence &amp; valuation.</p>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <a href="case-studies.html" class="nav-link text-sm font-medium tracking-wide">Case Studies</a>
+        <a href="insights.html" class="nav-link text-sm font-medium tracking-wide">Insights</a>
+        <a href="contact.html" class="nav-link text-sm font-medium tracking-wide">Contact Us</a>
+      </nav>
+
+      <!-- RIGHT: Desktop Controls (>= 1280px) -->
+      <div class="hidden xl:flex items-center space-x-3 rtl:space-x-reverse">
+        <!-- Dark/Light Theme Toggle (Dual Pill: Sun & Moon always visible) -->
+        <button type="button" class="theme-toggle-btn h-9 w-[88px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#F4F6F8] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold hover:border-[#C5A46D] transition-colors focus:outline-none cursor-pointer" aria-label="Toggle Dark/Light theme" title="Toggle theme">
+          <span class="theme-light-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all" title="Light Mode">
+            <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+          </span>
+          <span class="theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all" title="Dark Mode">
+            <i data-lucide="moon" class="w-3.5 h-3.5"></i>
+          </span>
+        </button>
+
+        <!-- LTR / RTL Toggle (Exact Match Size) -->
+        <button type="button" class="direction-toggle-btn h-9 w-[88px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#F4F6F8] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold hover:border-[#C5A46D] transition-colors focus:outline-none cursor-pointer" aria-label="Toggle layout direction" title="Toggle LTR / RTL">
+          <span class="dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all">LTR</span>
+          <span class="dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all">RTL</span>
+        </button>
+
+        <!-- Get In Touch CTA -->
+        <a href="contact.html" class="btn-gold h-9 ml-1 text-xs uppercase tracking-wider px-4 inline-flex items-center justify-center gap-1.5">
+          <span>Get in Touch</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 rtl-flip"></i>
+        </a>
+      </div>
+
+      <!-- Mobile & Tablet Menu Controls (< 1280px, including 1024px) -->
+      <div class="flex xl:hidden items-center space-x-2.5 rtl:space-x-reverse">
+        <!-- Hamburger Menu Button -->
+        <button type="button" id="mobile-menu-toggle" class="w-9 h-9 p-0 flex items-center justify-center rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-white dark:bg-[#1D2B38] text-[#142B45] dark:text-[#F3F5F7] focus:outline-none cursor-pointer" aria-expanded="false" aria-label="Open navigation menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE & TABLET MENU BACKDROP -->
+<div id="mobile-menu-backdrop" class="xl:hidden" aria-hidden="true"></div>
+
+<!-- MOBILE & TABLET FULL-SCREEN MENU DRAWER -->
+<aside id="mobile-menu-drawer" class="fixed inset-0 w-screen h-screen z-[9999] bg-white dark:bg-[#101820] flex flex-col justify-between overflow-y-auto xl:hidden" aria-label="Navigation Menu">
+  <div class="max-w-xl mx-auto w-full min-h-full flex flex-col justify-between p-6 pb-16 sm:p-10 sm:pb-20">
+    <div>
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between pb-6 border-b border-[#E2E8F0] dark:border-[#344454]">
+        <div class="flex items-center gap-3">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none">
+            <path d="M34 10H18C13.5817 10 10 13.5817 10 18V30C10 34.4183 13.5817 38 18 38H34" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" class="text-[#142B45] dark:text-[#F3F5F7]" />
+            <path d="M22 14L31 34L40 14" stroke="#C5A46D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="31" cy="20" r="2.2" fill="#C5A46D" />
+          </svg>
+          <span class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] tracking-[0.16em]">CORVANTIS</span>
+        </div>
+        <button type="button" id="mobile-menu-close" class="w-10 h-10 rounded-lg border border-[#E2E8F0] dark:border-[#344454] bg-[#F4F6F8] dark:bg-[#1D2B38] flex items-center justify-center text-[#718096] hover:text-[#142B45] dark:hover:text-white transition-colors cursor-pointer" aria-label="Close menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="flex flex-col space-y-3 mt-8">
+        <!-- MOBILE HOME ACCORDION -->
+        <div class="mobile-dropdown-container border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 pb-3">
+          <button type="button" 
+                  id="mobile-home-toggle"
+                  class="mobile-nav-link w-full flex items-center justify-between font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-2 cursor-pointer"
+                  aria-expanded="false" 
+                  aria-controls="mobile-home-submenu">
+            <span class="flex items-center gap-3">Home</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200 mobile-arrow text-[#C5A46D]"></i>
+          </button>
+          <div id="mobile-home-submenu" class="hidden flex-col pl-4 rtl:pr-4 rtl:pl-0 space-y-2 mt-2 mb-2 border-l-2 rtl:border-r-2 rtl:border-l-0 border-[#C5A46D]">
+            <a href="index.html" class="mobile-sublink flex items-center justify-between text-sm sm:text-base font-medium text-[#718096] dark:text-[#A5B1BE] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] py-1.5 transition-colors">
+              <span>Home 1 – Corporate Advisory</span>
+              <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-[#C5A46D]/15 text-[#C5A46D] font-bold">Classic</span>
+            </a>
+            <a href="home-2.html" class="mobile-sublink flex items-center justify-between text-sm sm:text-base font-medium text-[#718096] dark:text-[#A5B1BE] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] py-1.5 transition-colors">
+              <span>Home 2 – Modern Editorial</span>
+              <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 dark:text-blue-400 font-bold">Editorial</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+          <span>About Us</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
+        </a>
+        <!-- MOBILE SERVICES ACCORDION -->
+        <div class="mobile-dropdown-container border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 pb-3">
+          <button type="button" 
+                  id="mobile-services-toggle"
+                  class="mobile-nav-link w-full flex items-center justify-between font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-2 cursor-pointer"
+                  aria-expanded="false" 
+                  aria-controls="mobile-services-submenu">
+            <span class="flex items-center gap-3">Services</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200 mobile-arrow text-[#C5A46D]"></i>
+          </button>
+          <div id="mobile-services-submenu" class="hidden flex-col pl-4 rtl:pr-4 rtl:pl-0 space-y-4 mt-2 mb-2 border-l-2 rtl:border-r-2 rtl:border-l-0 border-[#C5A46D]">
+            
+            <a href="services.html" class="mobile-sublink flex items-center justify-between text-xs uppercase font-bold text-[#C5A46D] py-1 border-b border-[#E2E8F0]/40 dark:border-[#344454]/40">
+              <span>All Services Overview</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+            </a>
+
+            <!-- Group 1 -->
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A46D] block mb-1">Governance &amp; Board</span>
+              <div class="space-y-1.5 pl-2 rtl:pr-2 rtl:pl-0">
+                <a href="services/corporate-governance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Corporate Governance</a>
+                <a href="services/board-governance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Board Governance</a>
+                <a href="services/board-effectiveness.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Board Effectiveness</a>
+                <a href="services/leadership-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Leadership Advisory</a>
+              </div>
+            </div>
+
+            <!-- Group 2 -->
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A46D] block mb-1">Compliance &amp; Audit</span>
+              <div class="space-y-1.5 pl-2 rtl:pr-2 rtl:pl-0">
+                <a href="services/regulatory-compliance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Regulatory Compliance</a>
+                <a href="services/audit-preparation.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Audit Preparation</a>
+                <a href="services/compliance-reporting.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Compliance Reporting</a>
+                <a href="services/documentation-support.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Documentation Support</a>
+              </div>
+            </div>
+
+            <!-- Group 3 -->
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A46D] block mb-1">Risk &amp; Advisory</span>
+              <div class="space-y-1.5 pl-2 rtl:pr-2 rtl:pl-0">
+                <a href="services/risk-management.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Risk Management</a>
+                <a href="services/internal-audit.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Internal Audit</a>
+                <a href="services/business-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Business Advisory</a>
+                <a href="services/strategic-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Strategic Advisory</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <a href="case-studies.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+          <span>Case Studies</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
+        </a>
+        <a href="insights.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+          <span>Insights</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
+        </a>
+        <a href="contact.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+          <span>Contact Us</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Drawer Footer Controls (Theme, Direction & CTA) -->
+    <div class="pt-6 pb-6 border-t border-[#E2E8F0] dark:border-[#344454] space-y-4 mb-4">
+      <div class="grid grid-cols-2 gap-4">
+        <!-- THEME MODE TOGGLE -->
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454]">
+          <span class="text-xs uppercase font-semibold text-[#718096] dark:text-[#A5B1BE] tracking-wider">Theme</span>
+          <button type="button" class="theme-toggle-btn w-[88px] h-[34px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#FFFFFF] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold focus:outline-none cursor-pointer" aria-label="Toggle Dark/Light theme">
+            <span class="theme-light-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all" title="Light Mode">
+              <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+            </span>
+            <span class="theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all" title="Dark Mode">
+              <i data-lucide="moon" class="w-3.5 h-3.5"></i>
+            </span>
+          </button>
+        </div>
+
+        <!-- DIRECTION TOGGLE (LTR / RTL) -->
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454]">
+          <span class="text-xs uppercase font-semibold text-[#718096] dark:text-[#A5B1BE] tracking-wider">Layout</span>
+          <button type="button" class="direction-toggle-btn w-[88px] h-[34px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#FFFFFF] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold focus:outline-none cursor-pointer" aria-label="Toggle layout direction" title="Toggle LTR / RTL">
+            <span class="dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all">LTR</span>
+            <span class="dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all">RTL</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- GET IN TOUCH CTA -->
+      <a href="contact.html" class="btn-gold w-full text-center py-3.5 text-xs uppercase tracking-wider justify-center shadow-md font-bold">
+        <span>Get in Touch</span>
+        <i data-lucide="arrow-up-right" class="w-4 h-4 rtl-flip"></i>
+      </a>
+    </div>
+  </div>
+</aside>
+</body>
+</html>

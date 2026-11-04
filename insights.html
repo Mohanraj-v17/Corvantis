@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights &amp; Resources | CORVANTIS Corporate Governance &amp; Compliance Advisory</title>
+  <meta name="description" content="Explore authoritative perspectives, compliance regulatory updates, board governance briefings, and downloadable compliance checklists from CORVANTIS specialists.">
+  
+  <!-- Immediate Theme & Direction Initialization -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('corvantis_theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+      document.documentElement.dir = savedDir;
+    })();
+  </script>
+
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              primary: '#142B45',
+              secondary: '#203F5E',
+              dark: '#101820',
+              cardDark: '#1D2B38',
+              surfaceDark: '#182430'
+            },
+            gold: {
+              DEFAULT: '#C5A46D',
+              hover: '#B59359',
+              light: '#F8F5EE',
+              soft: 'rgba(197, 164, 109, 0.12)'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Production Scripts -->
+  <script src="js/theme.js" defer></script>
+  <script src="js/direction.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/validation.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] transition-colors duration-200">
+
+  <!-- COMMON NAVBAR (Injected dynamically from navbar.html via JS) -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <!-- ==========================================
+         SECTION 1: INSIGHTS HERO
+         Headline: Knowledge That Strengthens Governance.
+         ========================================== -->
+    <section class="relative py-24 sm:py-32 bg-[#142B45] text-white overflow-hidden" aria-label="Insights Hero">
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" 
+          alt="International governance briefings and executive compliance research library" 
+          class="w-full h-full object-cover filter brightness-[0.28] contrast-[1.05]"
+          loading="eager"
+        />
+        <div class="absolute inset-0 hero-gradient-overlay"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#C5A46D]/15 via-transparent to-black/60"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+          
+          <!-- Category Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C5A46D]/20 border border-[#C5A46D]/40 backdrop-blur-sm mb-6">
+            <span class="w-2 h-2 rounded-full bg-[#C5A46D] animate-pulse"></span>
+            <span class="text-xs uppercase tracking-[0.16em] font-semibold text-[#F8F5EE]">Executive Thought Leadership &amp; Regulatory Intelligence</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="hero-heading font-serif font-bold text-white mb-6 max-w-3xl mx-auto">
+            Knowledge That Strengthens Governance.
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="text-lg sm:text-xl text-[#F3F5F7]/90 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+            Explore authoritative perspectives, compliance updates, and practical guidance for responsible business management and fiduciary leadership.
+          </p>
+
+          <!-- Interactive Category Quick-Jump Filter Pills -->
+          <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-10 w-full">
+            <a href="#featured" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-all border border-white/20 backdrop-blur-sm inline-flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
+              <span>Featured Insight</span>
+            </a>
+            <a href="#regulatory" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-all border border-white/20 backdrop-blur-sm inline-flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="scale" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
+              <span>Regulatory Updates</span>
+            </a>
+            <a href="#governance-articles" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-all border border-white/20 backdrop-blur-sm inline-flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="landmark" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
+              <span>Board Governance</span>
+            </a>
+            <a href="#audit-insights" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-all border border-white/20 backdrop-blur-sm inline-flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
+              <span>Audit &amp; Risk</span>
+            </a>
+            <a href="#tools" class="px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-all border border-white/20 backdrop-blur-sm inline-flex items-center gap-1.5 shadow-sm">
+              <i data-lucide="download" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
+              <span>Compliance Guides</span>
+            </a>
+          </div>
+
+          <!-- Editorial Credibility Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-10 pt-8 border-t border-white/15 w-full max-w-3xl mx-auto text-center">
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#C5A46D]">Quarterly</div>
+              <div class="text-xs font-medium text-white/70 tracking-wider uppercase mt-1">Regulatory Horizon Scanning</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#C5A46D]">100%</div>
+              <div class="text-xs font-medium text-white/70 tracking-wider uppercase mt-1">Peer-Reviewed Fiduciary Analysis</div>
+            </div>
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-bold text-[#C5A46D]">Institutional</div>
+              <div class="text-xs font-medium text-white/70 tracking-wider uppercase mt-1">Executive Board Disclosures</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: FEATURED INSIGHT
+         Featured article layout:
+         "Why Strong Corporate Governance Matters for Growing Businesses"
+         ========================================== -->
+    <section id="featured" class="py-20 sm:py-24 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Featured Insight">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="gold-badge mb-4">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Featured Executive Insight</span>
+        </div>
+
+        <div class="corporate-card overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+            
+            <div class="lg:col-span-7 p-8 sm:p-12">
+              <span class="text-xs uppercase font-bold text-[#C5A46D] tracking-widest">Executive Governance &amp; Scale</span>
+              <h2 class="font-serif font-bold text-2xl sm:text-3xl lg:text-4xl text-[#142B45] dark:text-[#F3F5F7] mt-3 mb-5 leading-tight">
+                Why Strong Corporate Governance Matters for Growing Businesses
+              </h2>
+              <p class="body-text mb-6">
+                Fast-growing mid-market enterprises frequently postpone formal board structuring and compliance documentation until forced by an impending liquidity event or regulatory audit. However, empirical market data proves that early institutional governance significantly reduces cost of capital, mitigates founder liability, and unlocks institutional investment premiums.
+              </p>
+              
+              <div class="flex items-center gap-6 mb-8 text-xs text-[#718096] dark:text-[#A5B1BE]">
+                <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 8 Min Read</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> CORVANTIS Senior Advisory Council</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Peer Reviewed</span>
+              </div>
+
+              <!-- Interactive Read Article Modal Trigger -->
+              <button type="button" data-modal-target="article-modal" class="btn-navy text-xs uppercase tracking-wider py-3 px-6">
+                <span>Read Full Article</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+
+            <div class="lg:col-span-5 h-72 lg:h-full min-h-[380px]">
+              <img 
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80" 
+                alt="Executive board discussing governance strategies for growing mid-market enterprises" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: REGULATORY UPDATES
+         Display content about: Regulatory Developments, Compliance Requirements, Statutory Updates, Corporate Regulations.
+         ========================================== -->
+    <section id="regulatory" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Regulatory Updates">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <div>
+            <div class="gold-badge mb-3">
+              <i data-lucide="scale" class="w-3.5 h-3.5"></i>
+              <span>Horizon Scanning</span>
+            </div>
+            <h2 class="section-heading">Regulatory Developments &amp; Statutory Updates</h2>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] mt-2">
+              *Sample advisory briefings curated for demonstration of our regulatory monitoring methodology.
+            </p>
+          </div>
+          <span class="text-xs uppercase font-semibold text-[#C5A46D] px-3 py-1 rounded bg-[#C5A46D]/10 border border-[#C5A46D]/20 self-start md:self-auto mt-4 md:mt-0">
+            Sample Briefing Digest
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="corporate-card p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Statutory Update</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-3">
+                Corporate Transparency &amp; Beneficial Ownership Rules
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Heightened mandatory reporting directives requiring ultimate beneficial owner (UBO) verification across private corporate registries.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.7rem] text-[#718096] dark:text-[#A5B1BE]">
+              Mandate Status: Active Statutory Cycle
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Regulatory Development</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-3">
+                Mandatory Climate Governance Disclosures (CSRD / ISSB)
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Phased implementation of double-materiality statutory reporting for non-financial assets and executive sustainability oversight.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.7rem] text-[#718096] dark:text-[#A5B1BE]">
+              Mandate Status: Multi-Tier Enforcement
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Compliance Requirement</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-3">
+                Cross-Border Data Transfer &amp; Board Cyber Liability
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Stringent individual director fiduciary obligations established for critical infrastructure cyber hygiene and notification timelines.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.7rem] text-[#718096] dark:text-[#A5B1BE]">
+              Mandate Status: Enhanced Fiduciary Scrutiny
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Corporate Regulation</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-3">
+                Related-Party Transaction (RPT) Governance Codes
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Tightened thresholds for independent audit committee approval and shareholder disclosure on inter-company commercial contracts.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.7rem] text-[#718096] dark:text-[#A5B1BE]">
+              Mandate Status: Periodic Audit Examination
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: CORPORATE GOVERNANCE ARTICLES
+         Articles covering: Board Responsibilities, Corporate Accountability, Governance Frameworks, Leadership and Transparency.
+         ========================================== -->
+    <section id="governance-articles" class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Corporate Governance Articles">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="gold-badge mb-3">
+            <i data-lucide="landmark" class="w-3.5 h-3.5"></i>
+            <span>Executive Governance Series</span>
+          </div>
+          <h2 class="section-heading mb-4">Board &amp; Leadership Governance Insights</h2>
+          <p class="body-text">
+            Analytical briefings addressing the strategic, fiduciary, and behavioral dimensions of high-performing corporate leadership.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <article class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-10 h-10 rounded bg-[#142B45]/10 dark:bg-[#C5A46D]/15 text-[#142B45] dark:text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Board Dynamics</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Director Duty of Care in Tumultuous Economic Cycles
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Analyzing the legal boundaries of the Business Judgment Rule when navigating market stress and capital allocation challenges.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                Read Briefing <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-10 h-10 rounded bg-[#142B45]/10 dark:bg-[#C5A46D]/15 text-[#142B45] dark:text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="scale" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Accountability</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Structuring Defensible Executive Delegation Limits
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                How clear Delegation of Authority frameworks prevent executive overreach while preserving operational decision speed.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                Read Briefing <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-10 h-10 rounded bg-[#142B45]/10 dark:bg-[#C5A46D]/15 text-[#142B45] dark:text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Frameworks</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Benchmarking Mid-Market Governance Architectures
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Adapting Tier-1 public governance frameworks for privately held entities preparing for strategic equity investment or acquisition.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                Read Briefing <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </article>
+
+          <article class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-10 h-10 rounded bg-[#142B45]/10 dark:bg-[#C5A46D]/15 text-[#142B45] dark:text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="eye" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Culture &amp; Ethics</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Tone at the Top: Measuring Behavioral Governance
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Moving beyond written ethics policies to assess whether executive behaviors genuinely reinforce ethical transparency and compliance culture.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                Read Briefing <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: AUDIT & RISK MANAGEMENT
+         Include: Internal Audit Best Practices, Risk Assessment, Audit Preparation, Internal Control Frameworks.
+         ========================================== -->
+    <section id="audit-insights" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Audit and Risk Management Insights">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="gold-badge mb-3">
+            <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i>
+            <span>Assurance &amp; Control</span>
+          </div>
+          <h2 class="section-heading mb-4">Audit &amp; Risk Management Advisory Briefings</h2>
+          <p class="body-text">
+            Practical strategies for strengthening internal controls, preventing statutory audit qualifications, and quantifying enterprise exposure.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Internal Audit</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-2">
+                Internal Audit Best Practices for Pre-Audit Sprints
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                How rolling internal audit cycles identify material reconciliation discrepancies months ahead of statutory external review.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                View Analysis <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Risk Assessment</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-2">
+                Enterprise Risk Assessment &amp; Risk Appetite Matrices
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Methodologies for quantifying intangible risk categories—including regulatory sanctions, key person dependencies, and geopolitical shifts.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                View Analysis <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Audit Preparation</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-2">
+                Audit Readiness: Overcoming the PBC Backlog
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Organizing electronic evidentiary repositories to prevent auditor idle time and costly out-of-scope fee escalations.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                View Analysis <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <span class="text-[0.68rem] uppercase font-bold text-[#C5A46D] tracking-wider">Internal Controls</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-2 mb-2">
+                COSO Internal Control Frameworks in Practice
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Bridging the conceptual gap between high-level COSO principles and concrete segregation of duties in corporate treasury workflows.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="article-modal" class="text-xs font-semibold text-[#C5A46D] hover:text-[#B59359] inline-flex items-center gap-1">
+                View Analysis <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: COMPLIANCE GUIDES
+         Educational resource cards: Corporate Compliance Checklist, Board Meeting Preparation Guide, Audit Readiness Guide, Governance Documentation Guide.
+         ========================================== -->
+    <section id="tools" class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Compliance Guides and Tools">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+          <div>
+            <div class="gold-badge mb-3">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i>
+              <span>Advisory Toolkits</span>
+            </div>
+            <h2 class="section-heading">Compliance Guides &amp; Practical Frameworks</h2>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] mt-2">
+              *Sample educational resource documents available for interactive demonstration.
+            </p>
+          </div>
+          <span class="text-xs uppercase font-semibold text-[#C5A46D] self-start md:self-auto mt-4 md:mt-0">
+            Demonstration Downloadables
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="check-square" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[0.65rem] uppercase font-bold text-[#C5A46D] tracking-wider">PDF Kit (Demo)</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Corporate Compliance Checklist
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                A 35-point statutory health check covering corporate records, licensing verification, and regulatory filing calendars.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="guide-modal" class="btn-outline w-full py-2 text-xs uppercase tracking-wider">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                <span>Preview Guide</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="users" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[0.65rem] uppercase font-bold text-[#C5A46D] tracking-wider">PDF Kit (Demo)</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Board Meeting Preparation Guide
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Standardized board pack timeline, resolution drafting protocols, and minute-taking compliance rules.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="guide-modal" class="btn-outline w-full py-2 text-xs uppercase tracking-wider">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                <span>Preview Guide</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="clipboard-list" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[0.65rem] uppercase font-bold text-[#C5A46D] tracking-wider">PDF Kit (Demo)</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Audit Readiness &amp; Evidence Guide
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Step-by-step framework for establishing PBC data rooms and pre-clearing critical audit testing schedules.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="guide-modal" class="btn-outline w-full py-2 text-xs uppercase tracking-wider">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                <span>Preview Guide</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="corporate-card p-6 flex flex-col justify-between h-full">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-4">
+                <i data-lucide="folder-check" class="w-6 h-6"></i>
+              </div>
+              <span class="text-[0.65rem] uppercase font-bold text-[#C5A46D] tracking-wider">PDF Kit (Demo)</span>
+              <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">
+                Governance Documentation Guide
+              </h3>
+              <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                Legal retention schedules, digital signature validation rules, and document custody management templates.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-[#E2E8F0] dark:border-[#344454]">
+              <button type="button" data-modal-target="guide-modal" class="btn-outline w-full py-2 text-xs uppercase tracking-wider">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                <span>Preview Guide</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: KNOWLEDGE CTA
+         Headline: Stay Informed. Stay Compliant.
+         Newsletter Subscription UI: Email Input, Subscribe Button.
+         ========================================== -->
+    <section class="py-20 sm:py-24 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Newsletter Subscription">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="p-8 sm:p-12 rounded-2xl bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-md">
+          <div class="w-12 h-12 rounded-full bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </div>
+
+          <h2 class="section-heading mb-3">Stay Informed. Stay Compliant.</h2>
+          <p class="body-text max-w-xl mx-auto mb-8">
+            Receive our quarterly governance perspectives, statutory compliance updates, and boardroom advisory briefings directly in your inbox.
+          </p>
+
+          <form id="newsletter-form" class="max-w-md mx-auto" novalidate>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <div class="flex-1 text-start">
+                <label for="newsletter-email" class="sr-only">Business Email Address</label>
+                <input 
+                  type="email" 
+                  id="newsletter-email" 
+                  placeholder="name@company.com" 
+                  class="form-input text-sm py-3"
+                  required
+                />
+                <div id="newsletter-error" class="error-message"></div>
+              </div>
+              <button type="submit" class="btn-gold text-xs uppercase tracking-wider py-3 px-6 whitespace-nowrap">
+                <span>Subscribe</span>
+                <i data-lucide="send" class="w-3.5 h-3.5 rtl-flip"></i>
+              </button>
+            </div>
+            <p class="text-[0.7rem] text-[#718096] dark:text-[#A5B1BE] mt-3">
+              *Demonstration form: validates corporate email format in-browser without sending external emails.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: CONTACT CTA AND FOOTER
+         Headline: Have a Governance Question?
+         ========================================== -->
+    <section class="relative py-20 sm:py-24 bg-[#142B45] text-white overflow-hidden" aria-label="Insights Final CTA">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#C5A46D]/20 via-transparent to-transparent pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="gold-badge mb-6">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+          <span>Direct Advisory Counsel</span>
+        </div>
+
+        <h2 class="hero-heading font-serif font-bold text-white mb-6">
+          Have a Governance Question?
+        </h2>
+
+        <p class="text-base sm:text-lg text-[#F3F5F7]/85 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+          Our senior practice partners are available to discuss your specific corporate governance or regulatory compliance questions in complete confidence.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contact.html" class="btn-gold text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
+            <span>Contact Our Advisory Team</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+          </a>
+          <a href="services.html" class="btn-outline text-white border-white/40 hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
+            <span>Explore All Services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- DEMO ARTICLE MODAL -->
+  <div id="article-modal" class="modal-backdrop fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div class="bg-white dark:bg-[#1D2B38] max-w-2xl w-full rounded-xl shadow-2xl p-6 sm:p-8 max-h-[85vh] overflow-y-auto border border-[#E2E8F0] dark:border-[#344454]">
+      <div class="flex items-center justify-between pb-4 border-b border-[#E2E8F0] dark:border-[#344454] mb-4">
+        <span class="gold-badge">Executive Briefing Excerpt</span>
+        <button type="button" data-modal-close class="text-[#718096] hover:text-[#142B45] dark:hover:text-white" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <h3 class="font-serif font-bold text-xl sm:text-2xl text-[#142B45] dark:text-[#F3F5F7] mb-3">
+        Why Strong Corporate Governance Matters for Growing Businesses
+      </h3>
+      <p class="text-xs text-[#C5A46D] font-semibold mb-4">CORVANTIS Corporate Governance Practice &bull; 8 Min Executive Read</p>
+      <div class="space-y-4 text-xs sm:text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+        <p>
+          Corporate governance is often perceived as an overhead burden exclusive to publicly listed blue-chip conglomerates. For scaling mid-market enterprises and high-growth SMEs, however, the absence of codified governance is frequently the silent obstacle hindering institutional funding rounds and exit valuations.
+        </p>
+        <p>
+          Institutional investors and private equity funds conduct extensive due diligence not only on financial metrics, but on the integrity of executive decision-making. When board minutes are missing, delegation thresholds undefined, and compliance filings disorganized, investor risk premiums surge.
+        </p>
+        <p>
+          By establishing a clear Board Charter, appointing independent committee chairs, and implementing an automated compliance register early, organizations protect founder equity, ensure fiduciary compliance, and build permanent enterprise resilience.
+        </p>
+      </div>
+      <div class="pt-6 mt-6 border-t border-[#E2E8F0] dark:border-[#344454] flex justify-end">
+        <button type="button" data-modal-close class="btn-navy text-xs uppercase tracking-wider py-2.5 px-6">
+          Close Article
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMO GUIDE MODAL -->
+  <div id="guide-modal" class="modal-backdrop fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 backdrop-blur-sm" role="dialog" aria-modal="true">
+    <div class="bg-white dark:bg-[#1D2B38] max-w-lg w-full rounded-xl shadow-2xl p-6 sm:p-8 border border-[#E2E8F0] dark:border-[#344454]">
+      <div class="flex items-center justify-between pb-4 border-b border-[#E2E8F0] dark:border-[#344454] mb-4">
+        <span class="gold-badge">Demonstration Resource</span>
+        <button type="button" data-modal-close class="text-[#718096] hover:text-[#142B45] dark:hover:text-white" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="w-12 h-12 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center mb-4">
+        <i data-lucide="file-check" class="w-6 h-6"></i>
+      </div>
+      <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mb-2">
+        Advisory Toolkit Demonstration
+      </h3>
+      <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed mb-6">
+        This is a demonstration preview of CORVANTIS compliance guidance documentation. Our live advisory clients receive customized, multi-jurisdictional compliance checklists and board documentation tools tailored to their operating charters.
+      </p>
+      <div class="flex justify-end gap-3">
+        <button type="button" data-modal-close class="btn-outline text-xs uppercase tracking-wider py-2 px-4">
+          Close Preview
+        </button>
+        <a href="contact.html" class="btn-gold text-xs uppercase tracking-wider py-2 px-4">
+          Request Full Toolkit
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMON FOOTER (Injected dynamically from footer.html via JS) -->
+  <div id="footer-placeholder"></div>
+
+</body>
+</html>

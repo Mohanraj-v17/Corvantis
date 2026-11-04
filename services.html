@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | CORVANTIS Corporate Governance &amp; Compliance Advisory</title>
+  <meta name="description" content="Explore our full spectrum of specialized advisory services: Corporate Governance, Board Governance, Regulatory Compliance, Audit Preparation, Internal Audit & Risk Management, and Documentation.">
+  
+  <!-- Immediate Theme & Direction Initialization -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('corvantis_theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+      document.documentElement.dir = savedDir;
+    })();
+  </script>
+
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              primary: '#142B45',
+              secondary: '#203F5E',
+              dark: '#101820',
+              cardDark: '#1D2B38',
+              surfaceDark: '#182430'
+            },
+            gold: {
+              DEFAULT: '#C5A46D',
+              hover: '#B59359',
+              light: '#F8F5EE',
+              soft: 'rgba(197, 164, 109, 0.12)'
+            }
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Production Scripts -->
+  <script src="js/theme.js" defer></script>
+  <script src="js/direction.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/validation.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] transition-colors duration-200">
+
+  <!-- COMMON NAVBAR (Injected dynamically from navbar.html via JS) -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <!-- ==========================================
+         SECTION 1: SERVICES HERO
+         Headline: Strategic Advisory for Stronger Corporate Governance.
+         Description: Comprehensive governance, compliance, and audit advisory solutions designed to help organizations operate with confidence.
+         ========================================== -->
+    <section class="relative py-20 sm:py-28 bg-[#142B45] text-white overflow-hidden" aria-label="Services Hero">
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" 
+          alt="International corporate advisory headquarters and financial architecture" 
+          class="w-full h-full object-cover filter brightness-[0.3] contrast-[1.05]"
+          loading="eager"
+        />
+        <div class="absolute inset-0 hero-gradient-overlay"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+          <div class="gold-badge mb-5">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            <span>Comprehensive Advisory Suite</span>
+          </div>
+
+          <h1 class="hero-heading font-serif font-bold text-white mb-6 max-w-3xl mx-auto">
+            Strategic Advisory for Stronger Corporate Governance.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-[#F3F5F7]/90 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
+            Comprehensive governance, compliance, and audit advisory solutions designed to help organizations operate with confidence.
+          </p>
+
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="#governance" class="text-xs uppercase font-semibold tracking-wider px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-colors border border-white/20">Corporate Governance</a>
+            <a href="#board" class="text-xs uppercase font-semibold tracking-wider px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-colors border border-white/20">Board Management</a>
+            <a href="#compliance" class="text-xs uppercase font-semibold tracking-wider px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-colors border border-white/20">Regulatory Compliance</a>
+            <a href="#audit-prep" class="text-xs uppercase font-semibold tracking-wider px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-colors border border-white/20">Audit Preparation</a>
+            <a href="#risk" class="text-xs uppercase font-semibold tracking-wider px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-[#C5A46D] hover:text-white transition-colors border border-white/20">Internal Audit &amp; Risk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: CORPORATE GOVERNANCE ADVISORY
+         Explain: Governance Framework Development, Corporate Policy Guidance, Accountability Structures, Governance Assessments.
+         ========================================== -->
+    <section id="governance" class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Corporate Governance Advisory">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6">
+            <div class="gold-badge mb-4">
+              <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+              <span>Practice Area 01</span>
+            </div>
+            
+            <h2 class="section-heading mb-6">Corporate Governance Advisory</h2>
+            
+            <p class="body-text mb-8">
+              A robust governance structure is the cornerstone of sustainable enterprise success. We assist corporate boards, family businesses, and regulated institutions in drafting, refining, and implementing world-class governance frameworks that align executive decision-making with statutory duties and shareholder expectations.
+            </p>
+
+            <div class="space-y-4">
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  1. Governance Framework Development
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Designing overarching governance charters, articles of association alignments, and terms of reference tailored to organizational scale and sector standards.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  2. Corporate Policy Guidance
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Drafting and updating essential codes of conduct, conflict of interest declarations, insider trading safeguards, and whistleblower protections.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  3. Accountability Structures
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Establishing unambiguous delegation of authority (DoA) matrices, executive approval thresholds, and transparent reporting lines to eliminate operational ambiguity.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  4. Governance Assessments
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Conducting comprehensive diagnostic audits of existing governance practices against international corporate governance codes (OECD, UK Corporate Governance Code, King IV).
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-6 flex flex-wrap gap-3">
+              <a href="services/corporate-governance.html" class="btn-gold text-xs uppercase tracking-wider py-2.5 px-5 inline-flex items-center gap-1.5 shadow-sm">
+                <span>View Corporate Governance Practice</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-lg overflow-hidden shadow-2xl border border-[#E2E8F0] dark:border-[#344454]">
+              <img 
+                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80" 
+                alt="Corporate executive analyzing governance framework and accountability protocols" 
+                class="w-full h-[520px] object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#142B45]/85 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 inset-x-6 text-white">
+                <span class="text-xs uppercase font-bold text-[#C5A46D] tracking-widest">Defensible Frameworks</span>
+                <h4 class="font-serif text-lg font-bold mt-1">Institutional Governance Maturity</h4>
+                <p class="text-xs text-white/80 mt-1">Eliminating ambiguity through clearly defined delegations of authority and executive accountability.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: BOARD GOVERNANCE & MANAGEMENT
+         Explain: Board Structure Advisory, Board Meeting Governance, Director Responsibilities, Board Evaluation, Corporate Decision-Making.
+         ========================================== -->
+    <section id="board" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Board Governance and Management">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6 order-2 lg:order-1">
+            <div class="relative rounded-lg overflow-hidden shadow-2xl border border-[#E2E8F0] dark:border-[#344454]">
+              <img 
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=80" 
+                alt="Board of directors convening in executive boardroom for governance meeting" 
+                class="w-full h-[540px] object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#142B45]/85 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 inset-x-6 text-white">
+                <span class="text-xs uppercase font-bold text-[#C5A46D] tracking-widest">Boardroom Fiduciary</span>
+                <h4 class="font-serif text-lg font-bold mt-1">High-Performing Board Operations</h4>
+                <p class="text-xs text-white/80 mt-1">Ensuring director oversight meets statutory scrutiny and strategic leadership expectations.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 order-1 lg:order-2">
+            <div class="gold-badge mb-4">
+              <i data-lucide="users" class="w-3.5 h-3.5"></i>
+              <span>Practice Area 02</span>
+            </div>
+
+            <h2 class="section-heading mb-6">Board Governance &amp; Management</h2>
+
+            <p class="body-text mb-8">
+              The effectiveness of the Board of Directors directly determines an organization's strategic trajectory and fiduciary security. CORVANTIS advises chairpersons, non-executive directors, and board committees on creating balanced, high-functioning boardroom environments.
+            </p>
+
+            <div class="space-y-4">
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  1. Board Structure Advisory
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Advising on board composition, independence criteria, committee configurations (Audit, Risk, Remuneration, Nominations), and skills matrices.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  2. Board Meeting Governance
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Structuring board agendas, optimizing board pack delivery, enforcing resolution documentation standards, and minute-taking integrity.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  3. Director Responsibilities
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Clarifying statutory director duties (duty of care, duty of loyalty), mitigating personal liability, and delivering tailored director onboarding programs.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  4. Board Evaluation
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Conducting objective, confidential board performance assessments covering individual directors, committee efficacy, and board chair leadership.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  5. Corporate Decision-Making
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Establishing defensible protocols for major corporate transactions, conflict adjudication, and stakeholder engagement records.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-6 flex flex-wrap gap-3">
+              <a href="services/board-governance.html" class="btn-gold text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5 shadow-sm">
+                <span>Board Governance</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+              <a href="services/board-effectiveness.html" class="btn-outline border-[#142B45] dark:border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5">
+                <span>Board Effectiveness</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+              <a href="services/leadership-advisory.html" class="btn-outline border-[#142B45] dark:border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5">
+                <span>Leadership Advisory</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: REGULATORY COMPLIANCE ADVISORY
+         Explain: Regulatory Compliance Reviews, Compliance Frameworks, Statutory Compliance Guidance, Regulatory Risk Identification, Compliance Monitoring.
+         ========================================== -->
+    <section id="compliance" class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Regulatory Compliance Advisory">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6">
+            <div class="gold-badge mb-4">
+              <i data-lucide="scale" class="w-3.5 h-3.5"></i>
+              <span>Practice Area 03</span>
+            </div>
+
+            <h2 class="section-heading mb-6">Regulatory Compliance Advisory</h2>
+
+            <p class="body-text mb-8">
+              Modern enterprises operate within overlapping statutory regimes. CORVANTIS designs proactive compliance frameworks that protect entities from regulatory penalties, statutory breach notices, and reputational contagion.
+            </p>
+
+            <div class="space-y-4">
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  1. Regulatory Compliance Reviews
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Conducting detailed baseline audits of statutory filings, licensing prerequisites, and regulator reporting timetables across active markets.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  2. Compliance Frameworks
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Building operational Compliance Management Systems (CMS) benchmarked against ISO 37301 standards to formalize compliance accountability.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  3. Statutory Compliance Guidance
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Continuous guidance on local company laws, securities filings, corporate taxation disclosures, and specialized industry licensing rules.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  4. Regulatory Risk Identification
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Systematic hazard mapping to identify high-risk business activities subject to scrutiny by central banks, trade commissions, or tax authorities.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  5. Compliance Monitoring
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Instituting ongoing monitoring dashboards, periodic spot-audits, and automated regulatory calendar trackers for compliance personnel.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-6 flex flex-wrap gap-3">
+              <a href="services/regulatory-compliance.html" class="btn-gold text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5 shadow-sm">
+                <span>Regulatory Compliance</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+              <a href="services/compliance-reporting.html" class="btn-outline border-[#142B45] dark:border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5">
+                <span>Compliance Reporting</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-lg overflow-hidden shadow-2xl border border-[#E2E8F0] dark:border-[#344454]">
+              <img 
+                src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1000&q=80" 
+                alt="Legal and compliance documentation review" 
+                class="w-full h-[540px] object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#142B45]/85 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 inset-x-6 text-white">
+                <span class="text-xs uppercase font-bold text-[#C5A46D] tracking-widest">Statutory Precision</span>
+                <h4 class="font-serif text-lg font-bold mt-1">Multi-Jurisdictional Compliance Rigor</h4>
+                <p class="text-xs text-white/80 mt-1">Transforming abstract regulatory mandates into structured operational controls.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: AUDIT PREPARATION & READINESS
+         Explain: Audit Documentation, Internal Controls Assessment, Audit Readiness Reviews, Evidence Organization, Audit Coordination.
+         ========================================== -->
+    <section id="audit-prep" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Audit Preparation and Readiness">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6 order-2 lg:order-1">
+            <div class="relative rounded-lg overflow-hidden shadow-2xl border border-[#E2E8F0] dark:border-[#344454]">
+              <img 
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80" 
+                alt="Financial auditing and compliance team collaborating on audit readiness" 
+                class="w-full h-[540px] object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#142B45]/85 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 inset-x-6 text-white">
+                <span class="text-xs uppercase font-bold text-[#C5A46D] tracking-widest">Pre-Audit Assurance</span>
+                <h4 class="font-serif text-lg font-bold mt-1">Defensible Evidence Repositories</h4>
+                <p class="text-xs text-white/80 mt-1">Minimizing external audit cycles through comprehensive pre-clearance and evidence structure.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 order-1 lg:order-2">
+            <div class="gold-badge mb-4">
+              <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i>
+              <span>Practice Area 04</span>
+            </div>
+
+            <h2 class="section-heading mb-6">Audit Preparation &amp; Readiness</h2>
+
+            <p class="body-text mb-8">
+              External statutory audits are high-stakes examinations that consume vast corporate resources when unprepared. CORVANTIS bridges the gap between client finance teams and external auditors, ensuring seamless, query-free audit engagements.
+            </p>
+
+            <div class="space-y-4">
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  1. Audit Documentation
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Standardizing accounting position papers, revenue recognition schedules, related-party disclosure files, and balance sheet substantiations.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  2. Internal Controls Assessment
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Testing internal financial controls (IFC/ICFR) to detect design deficiencies or operating failures prior to external auditor walkthroughs.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  3. Audit Readiness Reviews
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Simulated pre-audit reviews identifying documentation gaps, reconciliations backlog, and potential management letter points.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  4. Evidence Organization
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Building structured, indexed electronic data rooms (PBC schedules) with tamper-evident evidentiary trails for rapid external auditor access.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  5. Audit Coordination
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Acting as technical advisors alongside the finance leadership, facilitating constructive technical dialogue with external audit partners.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-6 flex flex-wrap gap-3">
+              <a href="services/audit-preparation.html" class="btn-gold text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5 shadow-sm">
+                <span>Audit Preparation</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+              <a href="services/documentation-support.html" class="btn-outline border-[#142B45] dark:border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5">
+                <span>Documentation Support</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: INTERNAL AUDIT & RISK MANAGEMENT
+         Explain: Internal Audit Support, Risk Assessment, Internal Control Reviews, Risk Mitigation Planning, Operational Compliance.
+         ========================================== -->
+    <section id="risk" class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Internal Audit and Risk Management">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6">
+            <div class="gold-badge mb-4">
+              <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i>
+              <span>Practice Area 05</span>
+            </div>
+
+            <h2 class="section-heading mb-6">Internal Audit &amp; Risk Management</h2>
+
+            <p class="body-text mb-8">
+              Independent internal assurance gives executive leadership the empirical clarity needed to navigate enterprise vulnerabilities. We design and execute internal audit plans and enterprise risk management (ERM) strategies.
+            </p>
+
+            <div class="space-y-4">
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  1. Internal Audit Support
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Co-sourcing or outsourcing risk-based internal audit functions, delivering objective reports directly to the Audit Committee.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  2. Risk Assessment
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Designing dynamic risk registers, scoring impact and likelihood parameters, and formulating enterprise risk appetite statements.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  3. Internal Control Reviews
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Benchmarking internal controls against COSO frameworks to safeguard corporate assets and minimize operational fraud opportunities.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  4. Risk Mitigation Planning
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Formulating tangible corrective action plans with assigned risk owners and measurable remediation timelines.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-md bg-[#F4F6F8] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454]">
+                <h3 class="font-serif font-bold text-base text-[#142B45] dark:text-[#F3F5F7] mb-1">
+                  5. Operational Compliance
+                </h3>
+                <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+                  Reviewing procurement integrity, third-party vendor risks, supply chain dependencies, and operational business continuity plans.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-6 flex flex-wrap gap-3">
+              <a href="services/risk-management.html" class="btn-gold text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5 shadow-sm">
+                <span>Risk Management</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+              <a href="services/internal-audit.html" class="btn-outline border-[#142B45] dark:border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5">
+                <span>Internal Audit</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+              <a href="services/business-advisory.html" class="btn-outline border-[#142B45] dark:border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5">
+                <span>Business Advisory</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+              <a href="services/strategic-advisory.html" class="btn-outline border-[#142B45] dark:border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-2.5 px-4 inline-flex items-center gap-1.5">
+                <span>Strategic Advisory</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl-flip"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-lg overflow-hidden shadow-2xl border border-[#E2E8F0] dark:border-[#344454]">
+              <img 
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80" 
+                alt="Risk management and internal control specialists assessing corporate vulnerabilities" 
+                class="w-full h-[540px] object-cover"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#142B45]/85 via-transparent to-transparent"></div>
+              <div class="absolute bottom-6 inset-x-6 text-white">
+                <span class="text-xs uppercase font-bold text-[#C5A46D] tracking-widest">Enterprise Resilience</span>
+                <h4 class="font-serif text-lg font-bold mt-1">Holistic Risk Quantification</h4>
+                <p class="text-xs text-white/80 mt-1">Transforming internal controls from passive checklists into active defense mechanisms.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: COMPLIANCE DOCUMENTATION & REPORTING
+         Explain: Corporate Documentation, Policy Development, Compliance Reporting, Documentation Review, Governance Records Management.
+         ========================================== -->
+    <section id="reporting" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Compliance Documentation and Reporting">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="gold-badge mb-3">
+            <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+            <span>Practice Area 06</span>
+          </div>
+          <h2 class="section-heading mb-4">Compliance Documentation &amp; Reporting</h2>
+          <p class="body-text">
+            Precision, consistency, and traceability across all official corporate records, regulatory disclosures, and policy documentation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="corporate-card p-8">
+            <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <i data-lucide="folder-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Corporate Documentation</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              Standardizing corporate charters, powers of attorney, board resolutions, and statutory filings to create an unassailable legal trail.
+            </p>
+          </div>
+
+          <div class="corporate-card p-8">
+            <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <i data-lucide="bookmark" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Policy Development</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              Drafting plain-language, enforceable corporate policies across compliance, anti-bribery, information security, and employee ethics.
+            </p>
+          </div>
+
+          <div class="corporate-card p-8">
+            <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Compliance Reporting</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              Structuring regular reporting packs for the Board and regulators, quantifying compliance health and emerging statutory exposures.
+            </p>
+          </div>
+
+          <div class="corporate-card p-8">
+            <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <i data-lucide="file-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Documentation Review</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              Periodic statutory review of legacy contracts, governance agreements, and employee manuals to align with updated statutory codes.
+            </p>
+          </div>
+
+          <div class="corporate-card p-8 md:col-span-2 lg:col-span-2">
+            <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <i data-lucide="archive" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Governance Records Management</h3>
+            <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+              Developing legally compliant document retention schedules, electronic record-keeping protocols, and secure archival frameworks that ensure documents are instantly retrievable upon regulatory request or discovery demand.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: CONSULTATION CTA AND FOOTER
+         Headline: Need Expert Guidance for Your Governance Requirements?
+         ========================================== -->
+    <section class="relative py-20 sm:py-24 bg-[#142B45] text-white overflow-hidden" aria-label="Services Final CTA">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#C5A46D]/20 via-transparent to-transparent pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="gold-badge mb-6">
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+          <span>Advisory Scoping</span>
+        </div>
+
+        <h2 class="hero-heading font-serif font-bold text-white mb-6">
+          Need Expert Guidance for Your Governance Requirements?
+        </h2>
+
+        <p class="text-base sm:text-lg text-[#F3F5F7]/85 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+          Connect with our practice leaders to schedule a confidential assessment of your corporate governance structures or upcoming compliance obligations.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="contact.html" class="btn-gold text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
+            <span>Contact Our Experts</span>
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+          </a>
+          <a href="contact.html#enquiry-form-section" class="btn-outline text-white border-white/40 hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
+            <span>Submit an Enquiry</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- COMMON FOOTER (Injected dynamically from footer.html via JS) -->
+  <div id="footer-placeholder"></div>
+
+</body>
+</html>

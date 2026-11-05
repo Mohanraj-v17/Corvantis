@@ -1,13 +1,18 @@
 /**
  * CORVANTIS - Direction Management (LTR / RTL Layout Switching)
- * Persists layout direction in localStorage and updates document.documentElement.dir.
+ * Persists layout direction in localStorage and updates document.documentElement.dir instantly.
+ * Supports segmented control click behavior: clicking LTR sets LTR; clicking RTL sets RTL.
  */
 
 (function () {
   'use strict';
 
   function getPreferredDirection() {
-    return localStorage.getItem('corvantis_dir') || 'ltr';
+    try {
+      return localStorage.getItem('corvantis_dir') || 'ltr';
+    } catch (e) {
+      return 'ltr';
+    }
   }
 
   function applyDirection(dir) {
@@ -17,8 +22,9 @@
     updateDirectionButtons(validDir);
   }
 
-  function updateDirectionButtons(dir) {
-    const dirBtns = document.querySelectorAll('.direction-toggle-btn');
+  function updateDirectionButtons(dir, root) {
+    const context = root || document;
+    const dirBtns = context.querySelectorAll ? context.querySelectorAll('.direction-toggle-btn') : [];
     const isRtl = dir === 'rtl';
 
     dirBtns.forEach((btn) => {
@@ -30,42 +36,63 @@
       
       if (ltrBadge && rtlBadge) {
         if (isRtl) {
-          rtlBadge.className = 'dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all';
-          ltrBadge.className = 'dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium hover:text-[#142B45] dark:hover:text-[#F3F5F7] transition-all';
+          rtlBadge.classList.add('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          rtlBadge.classList.remove('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
+          ltrBadge.classList.remove('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          ltrBadge.classList.add('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
         } else {
-          ltrBadge.className = 'dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all';
-          rtlBadge.className = 'dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium hover:text-[#142B45] dark:hover:text-[#F3F5F7] transition-all';
+          ltrBadge.classList.add('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          ltrBadge.classList.remove('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
+          rtlBadge.classList.remove('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          rtlBadge.classList.add('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
         }
       }
     });
   }
 
-  function toggleDirection() {
-    const currentDir = document.documentElement.dir === 'rtl' ? 'rtl' : 'ltr';
-    const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
-    localStorage.setItem('corvantis_dir', newDir);
-    applyDirection(newDir);
+  function setDirection(newDir) {
+    const validDir = newDir === 'rtl' ? 'rtl' : 'ltr';
+    try {
+      localStorage.setItem('corvantis_dir', validDir);
+    } catch (e) {
+      // localStorage may be restricted or unavailable
+    }
+    applyDirection(validDir);
   }
 
-  function setDirection(newDir) {
-    localStorage.setItem('corvantis_dir', newDir);
-    applyDirection(newDir);
+  function toggleDirection() {
+    const currentDir = (document.documentElement.getAttribute('dir') || document.documentElement.dir) === 'rtl' ? 'rtl' : 'ltr';
+    const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+    setDirection(newDir);
+  }
+
+  function handleDirectionToggleEvent(e) {
+    const btn = e.target.closest('.direction-toggle-btn');
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const ltrClicked = e.target.closest('.dir-ltr-indicator');
+    const rtlClicked = e.target.closest('.dir-rtl-indicator');
+
+    if (ltrClicked) {
+      setDirection('ltr');
+    } else if (rtlClicked) {
+      setDirection('rtl');
+    } else {
+      toggleDirection();
+    }
   }
 
   function bindDirectionListeners() {
     const current = getPreferredDirection();
     applyDirection(current);
 
-    const toggleBtns = document.querySelectorAll('.direction-toggle-btn');
-    toggleBtns.forEach((btn) => {
-      if (!btn.dataset.dirBound) {
-        btn.dataset.dirBound = 'true';
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          toggleDirection();
-        });
-      }
-    });
+    if (!document.__dirDelegatedAttached) {
+      document.__dirDelegatedAttached = true;
+      document.addEventListener('click', handleDirectionToggleEvent, true);
+    }
 
     const ltrSpecificBtns = document.querySelectorAll('.set-ltr-btn');
     ltrSpecificBtns.forEach((btn) => {
@@ -90,11 +117,18 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  // Execute synchronously immediately upon script parse
+  const initial = getPreferredDirection();
+  applyDirection(initial);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindDirectionListeners);
+  } else {
     bindDirectionListeners();
-  });
+  }
 
   window.corvantisToggleDirection = toggleDirection;
   window.corvantisSetDirection = setDirection;
   window.corvantisInitDirection = bindDirectionListeners;
+  window.corvantisUpdateDirectionButtons = updateDirectionButtons;
 })();

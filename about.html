@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | CORVANTIS Corporate Governance &amp; Compliance Advisory</title>
-  <meta name="description" content="Learn about CORVANTIS, our founding heritage, mission, fiduciary core values, and structured 5-step advisory approach to corporate governance and regulatory compliance.">
-  
-  <!-- Immediate Theme & Direction Initialization -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/corvantis-mark.svg">
+
+  <meta name="description"
+    content="Learn about CORVANTIS, our founding heritage, mission, fiduciary core values, and structured 5-step advisory approach to corporate governance and regulatory compliance.">
+
   <script>
-    (function() {
-      const savedTheme = localStorage.getItem('corvantis_theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('corvantis_theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.dir = savedDir;
+        document.documentElement.setAttribute('lang', savedDir === 'rtl' ? 'ar' : 'en');
+      } catch (e) {
         document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.dir = 'ltr';
+        document.documentElement.setAttribute('lang', 'en');
       }
-      const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
-      document.documentElement.setAttribute('dir', savedDir);
-      document.documentElement.dir = savedDir;
     })();
   </script>
 
-  <!-- Google Fonts: Inter & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -57,42 +68,34 @@
     }
   </script>
 
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Production Scripts -->
   <script src="js/theme.js" defer></script>
   <script src="js/direction.js" defer></script>
   <script src="js/navigation.js" defer></script>
   <script src="js/validation.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
-<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] transition-colors duration-200">
 
-  <!-- COMMON NAVBAR (Injected dynamically from navbar.html via JS) -->
+<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] ">
+
   <div id="navbar-placeholder"></div>
 
   <main>
-    <!-- ==========================================
-         SECTION 1: ABOUT HERO
-         Headline: Building Confidence Through Responsible Governance.
-         Include professional introduction and corporate team image.
-         ========================================== -->
-    <section class="relative py-20 sm:py-28 bg-[#142B45] text-white overflow-hidden" aria-label="About Hero">
+
+    <section class="relative min-h-[90vh] flex items-center bg-[#142B45] text-white overflow-hidden"
+      aria-label="About Hero">
       <div class="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=2000&q=80" 
-          alt="Senior executive partner and corporate consulting team discussing governance framework" 
-          class="w-full h-full object-cover filter brightness-[0.32] contrast-[1.05]"
-          loading="eager"
-        />
+        <img src="assets/images/hero-2.avif"
+          alt="Senior executive partner and corporate consulting team discussing governance framework"
+          class="w-full h-full object-cover object-[50%_25%] filter brightness-[0.40] contrast-[1.05]"
+          loading="eager" />
         <div class="absolute inset-0 hero-gradient-overlay"></div>
       </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8 w-full text-center">
         <div class="max-w-3xl mx-auto flex flex-col items-center">
           <div class="gold-badge mb-5">
             <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
@@ -104,68 +107,73 @@
           </h1>
 
           <p class="text-lg sm:text-xl text-[#F3F5F7]/90 font-light leading-relaxed mb-8 max-w-2xl mx-auto">
-            CORVANTIS was founded on a singular conviction: that robust governance, fiduciary transparency, and regulatory rigor are the ultimate drivers of enterprise resilience and enduring investor trust.
+            CORVANTIS was founded on a singular conviction: that robust governance, fiduciary transparency, and
+            regulatory rigor are the ultimate drivers of enterprise resilience and enduring investor trust.
           </p>
 
-          <div class="inline-flex items-center justify-center gap-3 text-xs tracking-wider uppercase text-[#C5A46D] font-semibold">
+          <div
+            class="inline-flex items-center justify-center gap-3 text-xs tracking-wider uppercase text-[#C5A46D] font-semibold">
             <span>Independent</span> &bull; <span>Fiduciary</span> &bull; <span>Strategic Advisory</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 2: COMPANY OVERVIEW
-         Explain: Who CORVANTIS is, What the company does, Its advisory focus, Its commitment to businesses.
-         ========================================== -->
-    <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Company Overview">
+
+    <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]"
+      aria-label="Company Overview">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
+
           <div class="lg:col-span-6">
             <div class="gold-badge mb-4">
               <i data-lucide="info" class="w-3.5 h-3.5"></i>
               <span>Company Overview</span>
             </div>
-            
+
             <h2 class="section-heading mb-6">
               Empowering Leadership with Uncompromising Fiduciary Rigor
             </h2>
 
             <div class="space-y-4 text-sm text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
               <p>
-                <strong class="text-[#142B45] dark:text-[#F3F5F7]">Who We Are:</strong> CORVANTIS is an international advisory firm dedicated exclusively to the disciplines of corporate governance, board management, statutory compliance, and audit readiness. We operate as confidential counselors to directors, chief compliance officers, and general counsel.
+                <strong class="text-[#142B45] dark:text-[#F3F5F7]">Who We Are:</strong> CORVANTIS is an international
+                advisory firm dedicated exclusively to the disciplines of corporate governance, board management,
+                statutory compliance, and audit readiness. We operate as confidential counselors to directors, chief
+                compliance officers, and general counsel.
               </p>
               <p>
-                <strong class="text-[#142B45] dark:text-[#F3F5F7]">What We Do:</strong> We diagnose governance vulnerabilities, build defensible compliance architectures, structure board oversight committees, and conduct pre-audit reviews that ensure enterprises withstand the highest levels of statutory examination.
+                <strong class="text-[#142B45] dark:text-[#F3F5F7]">What We Do:</strong> We diagnose governance
+                vulnerabilities, build defensible compliance architectures, structure board oversight committees, and
+                conduct pre-audit reviews that ensure enterprises withstand the highest levels of statutory examination.
               </p>
               <p>
-                <strong class="text-[#142B45] dark:text-[#F3F5F7]">Our Advisory Focus:</strong> Bridging the critical divide between abstract regulatory codes and practical corporate execution, delivering bespoke frameworks tailored to complex jurisdictional mandates.
+                <strong class="text-[#142B45] dark:text-[#F3F5F7]">Our Advisory Focus:</strong> Bridging the critical
+                divide between abstract regulatory codes and practical corporate execution, delivering bespoke
+                frameworks tailored to complex jurisdictional mandates.
               </p>
               <p>
-                <strong class="text-[#142B45] dark:text-[#F3F5F7]">Our Commitment:</strong> We commit to absolute fiduciary independence, objective reporting without corporate bias, and durable solutions that safeguard long-term stakeholder value.
+                <strong class="text-[#142B45] dark:text-[#F3F5F7]">Our Commitment:</strong> We commit to absolute
+                fiduciary independence, objective reporting without corporate bias, and durable solutions that safeguard
+                long-term stakeholder value.
               </p>
             </div>
           </div>
 
           <div class="lg:col-span-6">
             <div class="grid grid-cols-2 gap-4">
+
               <div class="rounded-lg overflow-hidden border border-[#E2E8F0] dark:border-[#344454] shadow-md">
-                <img 
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80" 
-                  alt="Board meeting governance review" 
-                  class="w-full h-56 object-cover"
-                  loading="lazy"
-                />
+                <img src="assets/images/about-1.avif" alt="Board meeting governance review"
+                  class="w-full h-full object-cover" loading="lazy" />
               </div>
-              <div class="rounded-lg overflow-hidden border border-[#E2E8F0] dark:border-[#344454] shadow-md mt-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" 
-                  alt="Financial compliance and audit analysis" 
-                  class="w-full h-56 object-cover"
-                  loading="lazy"
-                />
+
+              <div
+                class="rounded-lg overflow-hidden border border-[#E2E8F0] dark:border-[#344454] shadow-md translate-y-16">
+                <img src="assets/images/about-2.jpeg" alt="Financial compliance and audit analysis"
+                  class="w-full h-56 object-cover" loading="lazy" />
               </div>
+
             </div>
           </div>
 
@@ -173,14 +181,11 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 3: OUR STORY
-         Explain company's purpose and the importance of strong governance and regulatory compliance.
-         ========================================== -->
+  
     <section class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Our Story">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto">
-          
+
           <div class="text-center mb-12">
             <div class="gold-badge mb-3">
               <i data-lucide="history" class="w-3.5 h-3.5"></i>
@@ -189,29 +194,45 @@
             <h2 class="section-heading">The Purpose Behind CORVANTIS</h2>
           </div>
 
-          <div class="p-8 sm:p-12 rounded-xl bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-sm relative">
-            <div class="text-6xl font-serif text-[#C5A46D]/20 absolute top-4 inset-inline-start-6 select-none">&ldquo;</div>
+          <div
+            class="p-8 sm:p-12 rounded-xl bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-sm relative">
+            <div class="text-6xl font-serif text-[#C5A46D]/20 absolute top-4 inset-inline-start-6 select-none">&ldquo;
+            </div>
 
-            <div class="relative z-10 space-y-6 text-sm sm:text-base text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
+            <div
+              class="relative z-10 space-y-6 text-sm sm:text-base text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
               <p>
-                In the modern corporate ecosystem, regulatory requirements do not stand still. From tightening international financial reporting directives and expanding director liabilities to complex cross-border trade and data sovereignty rules, the margin for error has vanished.
+                In the modern corporate ecosystem, regulatory requirements do not stand still. From tightening
+                international financial reporting directives and expanding director liabilities to complex cross-border
+                trade and data sovereignty rules, the margin for error has vanished.
               </p>
               <p>
-                CORVANTIS was established in response to a widespread organizational challenge: too many growing enterprises treat corporate governance as a reactive administrative chore rather than an essential strategic foundation. Disjointed board protocols, undocumented decision paths, and opaque reporting lines regularly expose otherwise successful enterprises to severe legal, financial, and reputational risk.
+                CORVANTIS was established in response to a widespread organizational challenge: too many growing
+                enterprises treat corporate governance as a reactive administrative chore rather than an essential
+                strategic foundation. Disjointed board protocols, undocumented decision paths, and opaque reporting
+                lines regularly expose otherwise successful enterprises to severe legal, financial, and reputational
+                risk.
               </p>
               <p>
-                Our founders—veterans of premier international accounting networks and corporate legal advisory bodies—united with a singular purpose: to provide organizations with institutional-grade governance architectures that foster proactive accountability, eliminate regulatory vulnerabilities, and elevate executive decision-making.
+                Our founders—veterans of premier international accounting networks and corporate legal advisory
+                bodies—united with a singular purpose: to provide organizations with institutional-grade governance
+                architectures that foster proactive accountability, eliminate regulatory vulnerabilities, and elevate
+                executive decision-making.
               </p>
             </div>
 
             <div class="mt-8 pt-6 border-t border-[#E2E8F0] dark:border-[#344454] flex items-center justify-between">
               <div>
-                <h4 class="font-serif font-bold text-sm text-[#142B45] dark:text-[#F3F5F7]">CORVANTIS Senior Advisory Council</h4>
+                <h4 class="font-serif font-bold text-sm text-[#142B45] dark:text-[#F3F5F7]">CORVANTIS Senior Advisory
+                  Council</h4>
                 <p class="text-xs text-[#C5A46D]">Independent Governance &amp; Regulatory Practice</p>
               </div>
-              <svg class="w-8 h-8 text-[#C5A46D]" viewBox="0 0 48 48" fill="none">
-                <path d="M34 10H18C13.5817 10 10 13.5817 10 18V30C10 34.4183 13.5817 38 18 38H34" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-                <path d="M22 14L31 34L40 14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <svg class="w-9 h-9 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34 10H18C13.5817 10 10 13.5817 10 18V30C10 34.4183 13.5817 38 18 38H34" stroke="currentColor"
+                  stroke-width="4.5" stroke-linecap="round" class="text-[#142B45] dark:text-[#F3F5F7]" />
+                <path d="M22 14L31 34L40 14" stroke="#C5A46D" stroke-width="4.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="31" cy="20" r="2.2" fill="#C5A46D" />
               </svg>
             </div>
           </div>
@@ -220,13 +241,11 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 4: MISSION AND VISION
-         Mission & Vision statements.
-         ========================================== -->
-    <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Mission and Vision">
+   
+    <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]"
+      aria-label="Mission and Vision">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
           <div class="gold-badge mb-3">
             <i data-lucide="target" class="w-3.5 h-3.5"></i>
@@ -239,8 +258,9 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          
-          <div class="p-8 sm:p-10 rounded-xl bg-[#F4F6F8] dark:bg-[#101820] border-2 border-[#C5A46D]/30 relative overflow-hidden group hover:border-[#C5A46D] transition-all flex flex-col justify-between h-full">
+
+          <div
+            class="p-8 sm:p-10 rounded-xl bg-[#F4F6F8] dark:bg-[#101820] border-2 border-[#C5A46D]/30 relative overflow-hidden group hover:border-[#C5A46D] transition-all flex flex-col justify-between h-full">
             <div>
               <div class="w-12 h-12 rounded-lg bg-[#C5A46D]/20 text-[#C5A46D] flex items-center justify-center mb-6">
                 <i data-lucide="compass" class="w-6 h-6"></i>
@@ -250,12 +270,14 @@
                 Strengthening Institutional Resilience
               </h3>
               <p class="text-sm sm:text-base text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                "To support organizations in strengthening governance structures and improving regulatory compliance practices."
+                "To support organizations in strengthening governance structures and improving regulatory compliance
+                practices."
               </p>
             </div>
           </div>
 
-          <div class="p-8 sm:p-10 rounded-xl bg-[#F4F6F8] dark:bg-[#101820] border-2 border-[#C5A46D]/30 relative overflow-hidden group hover:border-[#C5A46D] transition-all flex flex-col justify-between h-full">
+          <div
+            class="p-8 sm:p-10 rounded-xl bg-[#F4F6F8] dark:bg-[#101820] border-2 border-[#C5A46D]/30 relative overflow-hidden group hover:border-[#C5A46D] transition-all flex flex-col justify-between h-full">
             <div>
               <div class="w-12 h-12 rounded-lg bg-[#C5A46D]/20 text-[#C5A46D] flex items-center justify-center mb-6">
                 <i data-lucide="eye" class="w-6 h-6"></i>
@@ -275,13 +297,10 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 5: OUR CORE VALUES
-         6 values: Integrity, Transparency, Accountability, Professional Excellence, Trust, Continuous Improvement.
-         ========================================== -->
+ 
     <section class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Our Core Values">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
           <div class="gold-badge mb-3">
             <i data-lucide="check-check" class="w-3.5 h-3.5"></i>
@@ -289,80 +308,95 @@
           </div>
           <h2 class="section-heading mb-4">Our Core Values</h2>
           <p class="body-text">
-            The fundamental principles that govern our advisory interactions, diagnostic objectivity, and client relationships.
+            The fundamental principles that govern our advisory interactions, diagnostic objectivity, and client
+            relationships.
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          
+
           <div class="corporate-card p-8 flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <div
+                class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
                 <i data-lucide="shield" class="w-5 h-5"></i>
               </div>
               <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Integrity</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                We maintain unwavering ethical standards, absolute confidentiality, and intellectual honesty in every diagnostic review and board recommendation.
+                We maintain unwavering ethical standards, absolute confidentiality, and intellectual honesty in every
+                diagnostic review and board recommendation.
               </p>
             </div>
           </div>
 
           <div class="corporate-card p-8 flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <div
+                class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
                 <i data-lucide="search" class="w-5 h-5"></i>
               </div>
               <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Transparency</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                We communicate findings openly and objectively, ensuring directors and executives possess transparent visibility over risk realities.
+                We communicate findings openly and objectively, ensuring directors and executives possess transparent
+                visibility over risk realities.
               </p>
             </div>
           </div>
 
           <div class="corporate-card p-8 flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <div
+                class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
                 <i data-lucide="scale" class="w-5 h-5"></i>
               </div>
               <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Accountability</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                We instill clear ownership at every level of governance, ensuring management decisions and statutory duties are defensibly aligned.
+                We instill clear ownership at every level of governance, ensuring management decisions and statutory
+                duties are defensibly aligned.
               </p>
             </div>
           </div>
 
           <div class="corporate-card p-8 flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <div
+                class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
                 <i data-lucide="award" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Professional Excellence</h3>
+              <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Professional Excellence
+              </h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                We deliver world-class advisory methodologies informed by premier regulatory scholarship, statutory precedent, and cross-industry acumen.
+                We deliver world-class advisory methodologies informed by premier regulatory scholarship, statutory
+                precedent, and cross-industry acumen.
               </p>
             </div>
           </div>
 
           <div class="corporate-card p-8 flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <div
+                class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
                 <i data-lucide="handshake" class="w-5 h-5"></i>
               </div>
               <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Trust</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                We serve as discrete, reliable advisors whose guidance protects company reputation, investor relations, and regulatory goodwill.
+                We serve as discrete, reliable advisors whose guidance protects company reputation, investor relations,
+                and regulatory goodwill.
               </p>
             </div>
           </div>
 
           <div class="corporate-card p-8 flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
+              <div
+                class="w-10 h-10 rounded bg-[#142B45] dark:bg-[#C5A46D] text-white dark:text-[#101820] flex items-center justify-center mb-5">
                 <i data-lucide="trending-up" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Continuous Improvement</h3>
+              <h3 class="font-serif font-bold text-lg mb-2 text-[#142B45] dark:text-[#F3F5F7]">Continuous Improvement
+              </h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Governance is dynamic. We continually evolve client frameworks in response to shifting statutory codes, ESG benchmarks, and market demands.
+                Governance is dynamic. We continually evolve client frameworks in response to shifting statutory codes,
+                ESG benchmarks, and market demands.
               </p>
             </div>
           </div>
@@ -372,13 +406,11 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 6: OUR EXPERTISE
-         Highlight: Corporate Governance, Regulatory Compliance, Board Advisory, Audit Preparation, Risk Management.
-         ========================================== -->
-    <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Our Expertise">
+ 
+    <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]"
+      aria-label="Our Expertise">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="max-w-3xl mb-16">
           <div class="gold-badge mb-3">
             <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
@@ -386,72 +418,91 @@
           </div>
           <h2 class="section-heading mb-4">Advisory Practice Pillars</h2>
           <p class="body-text">
-            A cohesive suite of governance solutions addressing every tier of corporate accountability and regulatory interaction.
+            A cohesive suite of governance solutions addressing every tier of corporate accountability and regulatory
+            interaction.
           </p>
         </div>
 
         <div class="space-y-6">
-          <div class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div
+            class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="max-w-2xl">
               <span class="text-xs font-bold text-[#C5A46D] uppercase tracking-wider">Practice 01</span>
-              <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Corporate Governance</h3>
+              <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Corporate Governance
+              </h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Foundational governance blueprints, stakeholder rights alignment, executive compensation oversight, and formal corporate delegations.
+                Foundational governance blueprints, stakeholder rights alignment, executive compensation oversight, and
+                formal corporate delegations.
               </p>
             </div>
-            <a href="services.html#governance" class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
+            <a href="services.html#governance"
+              class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
               View Capabilities
             </a>
           </div>
 
-          <div class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div
+            class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="max-w-2xl">
               <span class="text-xs font-bold text-[#C5A46D] uppercase tracking-wider">Practice 02</span>
-              <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Regulatory Compliance</h3>
+              <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Regulatory
+                Compliance</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Statutory risk tracking, compliance registers, policy harmonization, and regulatory examination defense strategies.
+                Statutory risk tracking, compliance registers, policy harmonization, and regulatory examination defense
+                strategies.
               </p>
             </div>
-            <a href="services.html#compliance" class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
+            <a href="services.html#compliance"
+              class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
               View Capabilities
             </a>
           </div>
 
-          <div class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div
+            class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="max-w-2xl">
               <span class="text-xs font-bold text-[#C5A46D] uppercase tracking-wider">Practice 03</span>
               <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Board Advisory</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Board evaluation diagnostics, committee structuring, independent director orientation, and decision-making governance.
+                Board evaluation diagnostics, committee structuring, independent director orientation, and
+                decision-making governance.
               </p>
             </div>
-            <a href="services.html#board" class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
+            <a href="services.html#board"
+              class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
               View Capabilities
             </a>
           </div>
 
-          <div class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div
+            class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="max-w-2xl">
               <span class="text-xs font-bold text-[#C5A46D] uppercase tracking-wider">Practice 04</span>
-              <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Audit Preparation</h3>
+              <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Audit Preparation
+              </h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Pre-audit control validations, evidence room structure, documentation harmonization, and auditor liaison support.
+                Pre-audit control validations, evidence room structure, documentation harmonization, and auditor liaison
+                support.
               </p>
             </div>
-            <a href="services.html#audit-prep" class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
+            <a href="services.html#audit-prep"
+              class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
               View Capabilities
             </a>
           </div>
 
-          <div class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div
+            class="p-6 sm:p-8 rounded-lg bg-[#F4F6F8] dark:bg-[#101820] border border-[#E2E8F0] dark:border-[#344454] flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="max-w-2xl">
               <span class="text-xs font-bold text-[#C5A46D] uppercase tracking-wider">Practice 05</span>
               <h3 class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] mt-1 mb-2">Risk Management</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Enterprise risk management (ERM) architecture, internal controls testing, operational risk mapping, and risk appetite definition.
+                Enterprise risk management (ERM) architecture, internal controls testing, operational risk mapping, and
+                risk appetite definition.
               </p>
             </div>
-            <a href="services.html#risk" class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
+            <a href="services.html#risk"
+              class="btn-outline text-xs uppercase tracking-wider py-2.5 px-5 self-start md:self-center shrink-0">
               View Capabilities
             </a>
           </div>
@@ -460,13 +511,10 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 7: OUR APPROACH
-         Show a five-step process: Understand, Assess, Advise, Improve, Support.
-         ========================================== -->
+ 
     <section class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Our Approach">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-3xl mx-auto mb-16">
           <div class="gold-badge mb-3">
             <i data-lucide="git-branch" class="w-3.5 h-3.5"></i>
@@ -474,83 +522,104 @@
           </div>
           <h2 class="section-heading mb-4">Our Structured 5-Step Approach</h2>
           <p class="body-text">
-            A repeatable, evidence-based advisory methodology that transforms governance diagnostics into lasting operational excellence.
+            A repeatable, evidence-based advisory methodology that transforms governance diagnostics into lasting
+            operational excellence.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
-          
-          <div class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
+
+          <div
+            class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
+              <div
+                class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
                 01
               </div>
               <h3 class="font-serif font-bold text-base mb-2 text-[#142B45] dark:text-[#F3F5F7]">Understand</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Initial stakeholder interviews, organizational context analysis, corporate charter review, and regulatory environment scoping.
+                Initial stakeholder interviews, organizational context analysis, corporate charter review, and
+                regulatory environment scoping.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
+            <div
+              class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
               Phase: Discovery
             </div>
           </div>
 
-          <div class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
+          <div
+            class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
+              <div
+                class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
                 02
               </div>
               <h3 class="font-serif font-bold text-base mb-2 text-[#142B45] dark:text-[#F3F5F7]">Assess</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                In-depth gap analysis against statutory mandates, internal control stress-testing, and compliance risk quantification.
+                In-depth gap analysis against statutory mandates, internal control stress-testing, and compliance risk
+                quantification.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
+            <div
+              class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
               Phase: Diagnostic
             </div>
           </div>
 
-          <div class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
+          <div
+            class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
+              <div
+                class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
                 03
               </div>
               <h3 class="font-serif font-bold text-base mb-2 text-[#142B45] dark:text-[#F3F5F7]">Advise</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Formulating executive advisory blueprints, prioritized remediation roadmaps, and board-level recommendations.
+                Formulating executive advisory blueprints, prioritized remediation roadmaps, and board-level
+                recommendations.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
+            <div
+              class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
               Phase: Strategy
             </div>
           </div>
 
-          <div class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
+          <div
+            class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
+              <div
+                class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
                 04
               </div>
               <h3 class="font-serif font-bold text-base mb-2 text-[#142B45] dark:text-[#F3F5F7]">Improve</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Assisting in the rollout of revised charters, compliance systems, reporting templates, and management control workflows.
+                Assisting in the rollout of revised charters, compliance systems, reporting templates, and management
+                control workflows.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
+            <div
+              class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
               Phase: Execution
             </div>
           </div>
 
-          <div class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
+          <div
+            class="p-6 rounded-lg bg-[#FFFFFF] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] relative flex flex-col justify-between h-full">
             <div>
-              <div class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
+              <div
+                class="w-10 h-10 rounded-full bg-[#142B45] text-[#C5A46D] font-serif font-bold flex items-center justify-center mb-4 text-sm">
                 05
               </div>
               <h3 class="font-serif font-bold text-base mb-2 text-[#142B45] dark:text-[#F3F5F7]">Support</h3>
               <p class="text-xs text-[#718096] dark:text-[#A5B1BE] leading-relaxed">
-                Ongoing advisory retainer, statutory horizon scanning, annual board performance evaluations, and audit liaison support.
+                Ongoing advisory retainer, statutory horizon scanning, annual board performance evaluations, and audit
+                liaison support.
               </p>
             </div>
-            <div class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
+            <div
+              class="mt-4 pt-3 border-t border-[#E2E8F0] dark:border-[#344454] text-[0.68rem] font-semibold text-[#C5A46D] uppercase">
               Phase: Sustainability
             </div>
           </div>
@@ -560,12 +629,10 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 8: CTA AND FOOTER
-         Headline: Partner With Us for Stronger Corporate Governance.
-         ========================================== -->
     <section class="relative py-20 sm:py-24 bg-[#142B45] text-white overflow-hidden" aria-label="About Final CTA">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#C5A46D]/15 via-transparent to-transparent pointer-events-none"></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#C5A46D]/15 via-transparent to-transparent pointer-events-none">
+      </div>
 
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div class="gold-badge mb-6">
@@ -578,7 +645,8 @@
         </h2>
 
         <p class="text-base sm:text-lg text-[#F3F5F7]/85 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-          Let us discuss how our specialized governance, board advisory, and compliance frameworks can elevate your organization's oversight and strategic certainty.
+          Let us discuss how our specialized governance, board advisory, and compliance frameworks can elevate your
+          organization's oversight and strategic certainty.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -586,7 +654,8 @@
             <span>Initiate an Advisory Discussion</span>
             <i data-lucide="arrow-right" class="w-4 h-4 rtl-flip"></i>
           </a>
-          <a href="services.html" class="btn-outline text-white border-white/40 hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
+          <a href="services.html"
+            class="btn-outline text-white border-white/40 hover:border-[#C5A46D] hover:text-[#C5A46D] text-xs uppercase tracking-wider py-3.5 px-8 w-full sm:w-auto">
             <span>Explore All Services</span>
           </a>
         </div>
@@ -595,8 +664,8 @@
 
   </main>
 
-  <!-- COMMON FOOTER (Injected dynamically from footer.html via JS) -->
   <div id="footer-placeholder"></div>
 
 </body>
+
 </html>

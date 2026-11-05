@@ -55,7 +55,6 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-main);
   color: var(--text-primary);
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 body {
@@ -143,6 +142,7 @@ html.dark .brand-name {
   top: 0;
   z-index: 50;
   width: 100%;
+  min-height: 5rem;
 }
 
 .navbar-sticky {
@@ -496,13 +496,13 @@ html.dark ::-webkit-scrollbar-thumb {
   max-width: 100vw !important;
   height: 100vh !important;
   height: 100dvh !important;
-  background-color: #FFFFFF;
+  background-color: #FFFFFF !important;
   z-index: 9999;
   transform: translateX(100%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s ease, background-color 0.25s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s ease;
   overflow-y: auto;
   overflow-x: hidden !important;
   display: flex !important;
@@ -534,6 +534,12 @@ html.dark ::-webkit-scrollbar-thumb {
   min-height: 3rem !important;
   display: flex !important;
   align-items: center !important;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 0.925rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.35 !important;
 }
 
 .phase-card-footer {
@@ -613,8 +619,200 @@ html[dir="rtl"] #mobile-menu-drawer.open {
   pointer-events: auto !important;
 }
 
+/* ==========================================================================
+   Mobile Navigation Drawer & Toggle Controls - Guaranteed Light & Dark Mode
+   ========================================================================== */
+#mobile-menu-drawer {
+  background-color: #FFFFFF !important;
+  color: #142B45 !important;
+}
+
 html.dark #mobile-menu-drawer {
-  background-color: #101820;
+  background-color: #101820 !important;
+  color: #F3F5F7 !important;
+}
+
+/* Drawer Brand Typography */
+#mobile-menu-drawer .brand-name,
+#mobile-menu-drawer span.brand-name {
+  color: #142B45 !important;
+}
+html.dark #mobile-menu-drawer .brand-name,
+html.dark #mobile-menu-drawer span.brand-name {
+  color: #F3F5F7 !important;
+}
+
+/* Close Button in Mobile Drawer Header */
+#mobile-menu-drawer #mobile-menu-close {
+  background-color: #F4F6F8 !important;
+  border-color: #E2E8F0 !important;
+  color: #718096 !important;
+}
+html.dark #mobile-menu-drawer #mobile-menu-close {
+  background-color: #1D2B38 !important;
+  border-color: #344454 !important;
+  color: #A5B1BE !important;
+}
+#mobile-menu-drawer #mobile-menu-close:hover {
+  color: #142B45 !important;
+}
+html.dark #mobile-menu-drawer #mobile-menu-close:hover {
+  color: #FFFFFF !important;
+}
+
+/* Mobile Nav Links - Font Color Fully Adaptive in Light & Dark Mode */
+#mobile-menu-drawer .mobile-nav-link,
+.mobile-nav-link {
+  color: #142B45 !important;
+  transition: color 0.2s ease, border-color 0.2s ease !important;
+}
+
+html.dark #mobile-menu-drawer .mobile-nav-link,
+html.dark .mobile-nav-link {
+  color: #F3F5F7 !important;
+}
+
+#mobile-menu-drawer .mobile-nav-link span,
+.mobile-nav-link span {
+  color: inherit !important;
+}
+
+/* Active state - ONLY the currently active page receives gold text */
+#mobile-menu-drawer .mobile-nav-link.active,
+html.dark #mobile-menu-drawer .mobile-nav-link.active {
+  color: #C5A46D !important;
+  font-weight: 700 !important;
+}
+
+#mobile-menu-drawer .mobile-nav-link.active span,
+html.dark #mobile-menu-drawer .mobile-nav-link.active span {
+  color: #C5A46D !important;
+}
+
+/* Hover effect for non-active links: NEVER turn text or arrows gold! Keeps current active link clear and unique */
+@media (hover: hover) {
+  #mobile-menu-drawer .mobile-nav-link:not(.active):hover {
+    color: #142B45 !important;
+    background-color: rgba(197, 164, 109, 0.06);
+    border-radius: 6px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  html.dark #mobile-menu-drawer .mobile-nav-link:not(.active):hover {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  #mobile-menu-drawer .mobile-nav-link:not(.active):hover span,
+  html.dark #mobile-menu-drawer .mobile-nav-link:not(.active):hover span {
+    color: inherit !important;
+  }
+}
+
+/* Arrow indicators: active page arrow is vivid gold (opacity 1); non-active are subtle */
+#mobile-menu-drawer .mobile-nav-link i,
+#mobile-menu-drawer .mobile-nav-link svg {
+  color: #A0AEC0 !important;
+  opacity: 0.35 !important;
+  transition: opacity 0.2s ease, color 0.2s ease !important;
+}
+
+html.dark #mobile-menu-drawer .mobile-nav-link i,
+html.dark #mobile-menu-drawer .mobile-nav-link svg {
+  color: #718096 !important;
+  opacity: 0.35 !important;
+}
+
+#mobile-menu-drawer .mobile-nav-link.active i,
+#mobile-menu-drawer .mobile-nav-link.active svg,
+html.dark #mobile-menu-drawer .mobile-nav-link.active i,
+html.dark #mobile-menu-drawer .mobile-nav-link.active svg {
+  color: #C5A46D !important;
+  opacity: 1 !important;
+}
+
+/* Drawer Row Divider Lines */
+.mobile-dropdown-container,
+#mobile-menu-drawer nav > a {
+  border-bottom-color: #E2E8F0 !important;
+}
+
+html.dark .mobile-dropdown-container,
+html.dark #mobile-menu-drawer nav > a {
+  border-bottom-color: #344454 !important;
+}
+
+/* Submenu container borders */
+#mobile-home-submenu,
+#mobile-services-submenu {
+  border-color: #C5A46D !important;
+}
+
+/* Accordion Sub-links */
+.mobile-sublink {
+  color: #4A5568 !important;
+  transition: color 0.15s ease, background-color 0.15s ease !important;
+}
+
+html.dark .mobile-sublink {
+  color: #A5B1BE !important;
+}
+
+.mobile-sublink:not(.active):hover {
+  color: #142B45 !important;
+}
+
+html.dark .mobile-sublink:not(.active):hover {
+  color: #FFFFFF !important;
+}
+
+/* Drawer Footer Controls Container */
+#mobile-menu-drawer .pt-6.pb-6 {
+  border-top-color: #E2E8F0 !important;
+}
+html.dark #mobile-menu-drawer .pt-6.pb-6 {
+  border-top-color: #344454 !important;
+}
+
+.drawer-control-box {
+  background-color: #F8F9FA !important;
+  border-color: #E2E8F0 !important;
+}
+html.dark .drawer-control-box {
+  background-color: #182430 !important;
+  border-color: #344454 !important;
+}
+
+.drawer-control-label {
+  color: #142B45 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+html.dark .drawer-control-label {
+  color: #F3F5F7 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Universal Segmented Controls (Desktop Header & Mobile Drawer) */
+.theme-toggle-btn,
+.direction-toggle-btn {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+}
+
+html.dark .theme-toggle-btn,
+html.dark .direction-toggle-btn {
+  background-color: #1D2B38 !important;
+  border-color: #344454 !important;
+}
+
+.theme-toggle-btn:hover,
+.direction-toggle-btn:hover {
+  border-color: #C5A46D !important;
 }
 
 /* Strictly hide and eliminate from layout on full desktop viewports (>= 1280px) */
@@ -651,17 +849,14 @@ html.dark #mobile-menu-drawer {
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
-.dropdown-container.open .dropdown-menu,
-.dropdown-container:hover .dropdown-menu,
-.dropdown-container:focus-within .dropdown-menu {
+.dropdown-container.open .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-.dropdown-container.open .dropdown-arrow,
-.dropdown-container:hover .dropdown-arrow {
+.dropdown-container.open .dropdown-arrow {
   transform: rotate(180deg);
 }
 
@@ -681,17 +876,14 @@ html.dark #mobile-menu-drawer {
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 }
 
-#services-dropdown-container.open .mega-menu,
-#services-dropdown-container:hover .mega-menu,
-#services-dropdown-container:focus-within .mega-menu {
+#services-dropdown-container.open .mega-menu {
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(0);
   pointer-events: auto;
 }
 
-#services-dropdown-container.open .dropdown-arrow,
-#services-dropdown-container:hover .dropdown-arrow {
+#services-dropdown-container.open .dropdown-arrow {
   transform: rotate(180deg);
 }
 
@@ -750,12 +942,10 @@ footer[aria-label="Corporate Footer"] {
   background-color: var(--bg-main);
   color: var(--text-muted);
   border-top: 1px solid var(--border-color);
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
   color: var(--text-primary);
-  transition: color 0.25s ease;
 }
 
 footer a:not(.btn-gold) {
@@ -794,6 +984,8 @@ footer span {
   box-sizing: border-box !important;
   border-radius: 6px !important;
   user-select: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.08s ease, border-color 0.08s ease !important;
 }
 
 .theme-light-indicator,
@@ -807,25 +999,91 @@ footer span {
   border-radius: 4px !important;
   font-size: 0.7rem !important;
   text-transform: uppercase !important;
-  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+  transition: background-color 0.08s ease, color 0.08s ease !important;
 }
 
-/* Active Gold Pill Icon & Text Contrast (Sun and Moon never disappear) */
-.theme-light-indicator.bg-\[\#C5A46D\],
-.theme-dark-indicator.bg-\[\#C5A46D\],
-.dir-ltr-indicator.bg-\[\#C5A46D\],
-.dir-rtl-indicator.bg-\[\#C5A46D\] {
+/* Inactive Indicators - Crisp Contrast */
+.theme-light-indicator:not(.active),
+.theme-dark-indicator:not(.active),
+.dir-ltr-indicator:not(.active),
+.dir-rtl-indicator:not(.active) {
+  color: #718096 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html.dark .theme-light-indicator:not(.active),
+html.dark .theme-dark-indicator:not(.active),
+html.dark .dir-ltr-indicator:not(.active),
+html.dark .dir-rtl-indicator:not(.active) {
+  color: #A5B1BE !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.theme-light-indicator:not(.active) svg,
+.theme-light-indicator:not(.active) i,
+.theme-dark-indicator:not(.active) svg,
+.theme-dark-indicator:not(.active) i {
+  color: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Active Gold Pill Indicator (Light and Dark Mode) */
+.theme-light-indicator.active,
+.theme-dark-indicator.active,
+.dir-ltr-indicator.active,
+.dir-rtl-indicator.active,
+html.dark .theme-light-indicator.active,
+html.dark .theme-dark-indicator.active,
+html.dark .dir-ltr-indicator.active,
+html.dark .dir-rtl-indicator.active {
   background-color: #C5A46D !important;
   color: #FFFFFF !important;
+  font-weight: 700 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
 }
 
-.theme-light-indicator.bg-\[\#C5A46D\] svg,
-.theme-light-indicator.bg-\[\#C5A46D\] i,
-.theme-dark-indicator.bg-\[\#C5A46D\] svg,
-.theme-dark-indicator.bg-\[\#C5A46D\] i {
+.theme-light-indicator.active svg,
+.theme-light-indicator.active i,
+.theme-dark-indicator.active svg,
+.theme-dark-indicator.active i,
+html.dark .theme-light-indicator.active svg,
+html.dark .theme-dark-indicator.active svg,
+html.dark .theme-light-indicator.active i,
+html.dark .theme-dark-indicator.active i {
   color: #FFFFFF !important;
   stroke: #FFFFFF !important;
 }
 
+/* Accordion Sub-links */
+.mobile-sublink {
+  color: #718096 !important;
+  transition: color 0.15s ease !important;
+}
 
+html.dark .mobile-sublink {
+  color: #A5B1BE !important;
+}
 
+.mobile-sublink:not(.active):hover {
+  color: #142B45 !important;
+}
+
+html.dark .mobile-sublink:not(.active):hover {
+  color: #FFFFFF !important;
+}
+
+/* Active Mobile Sublink (Home 1, Home 2, or Service Subpages) */
+.mobile-sublink.active,
+html.dark .mobile-sublink.active {
+  color: #C5A46D !important;
+  font-weight: 700 !important;
+}
+
+.mobile-sublink.active span,
+html.dark .mobile-sublink.active span {
+  color: #C5A46D !important;
+  font-weight: 700 !important;
+}

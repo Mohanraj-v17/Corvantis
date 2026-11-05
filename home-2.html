@@ -4,24 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home 2 (Editorial) | CORVANTIS Corporate Governance &amp; Compliance Advisory</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo/corvantis-mark.svg">
+
   <meta name="description" content="Governance That Moves Business Forward. Navigate complex regulatory environments with confidence through structured governance, compliance, and risk advisory.">
 
-  <!-- Immediate Theme & Direction Initialization (Prevents Flash) -->
   <script>
-    (function() {
-      const savedTheme = localStorage.getItem('corvantis_theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('corvantis_theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.dir = savedDir;
+        document.documentElement.setAttribute('lang', savedDir === 'rtl' ? 'ar' : 'en');
+      } catch (e) {
         document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.dir = 'ltr';
+        document.documentElement.setAttribute('lang', 'en');
       }
-      const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
-      document.documentElement.setAttribute('dir', savedDir);
-      document.documentElement.dir = savedDir;
     })();
   </script>
 
-  <!-- Google Fonts: Inter & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -57,43 +65,32 @@
     }
   </script>
 
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Production Scripts -->
   <script src="js/theme.js" defer></script>
   <script src="js/direction.js" defer></script>
   <script src="js/navigation.js" defer></script>
   <script src="js/validation.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
-<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] transition-colors duration-200">
+<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] ">
 
-  <!-- COMMON NAVBAR (Injected dynamically from navbar.html via JS) -->
   <div id="navbar-placeholder"></div>
 
   <main>
-    <!-- ==========================================
-         SECTION 1 – ALTERNATIVE HERO (Modern Asymmetric Editorial)
-         Headline: Governance That Moves Business Forward.
-         Description: Navigate complex regulatory environments with confidence through structured governance, compliance, and risk advisory.
-         Buttons: Discover Our Approach | Request Consultation
-         ========================================== -->
-    <section class="relative min-h-[92vh] flex items-center bg-[#101820] text-white overflow-hidden" aria-label="Editorial Hero">
-      <!-- Background Dynamic Graphic Gradient -->
+
+    <section class="relative min-h-[90vh] flex items-center bg-[#101820] text-white overflow-hidden" aria-label="Editorial Hero">
       <div class="absolute inset-0 z-0">
         <div class="absolute top-0 right-0 w-[55vw] h-full bg-gradient-to-l from-[#142B45]/80 via-[#101820]/90 to-[#101820] z-10"></div>
         <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-[#C5A46D]/15 blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-[#203F5E]/30 blur-2xl pointer-events-none"></div>
       </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 w-full">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          <!-- Editorial Text Side (7 Cols) -->
           <div class="lg:col-span-7 flex flex-col justify-center">
             <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#C5A46D]/15 border border-[#C5A46D]/30 w-fit mb-6">
               <span class="w-2 h-2 rounded-full bg-[#C5A46D]"></span>
@@ -131,22 +128,18 @@
             </div>
           </div>
 
-          <!-- Editorial Visual Montage (5 Cols) -->
           <div class="lg:col-span-5 relative">
             <div class="relative mx-auto max-w-md lg:max-w-none">
-              <!-- Backing Gold Geometric Accent -->
               <div class="absolute -top-4 -left-4 w-full h-full border-2 border-[#C5A46D]/40 rounded-xl pointer-events-none transform -rotate-1 hidden sm:block"></div>
               
-              <!-- Main High-Contrast Image -->
               <div class="relative rounded-xl overflow-hidden shadow-2xl border border-white/10 z-10 bg-[#182430]">
                 <img 
-                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" 
+                  src="assets/images/growth.jpeg" 
                   alt="Senior governance strategist reviewing corporate charter" 
                   class="w-full h-[460px] object-cover filter contrast-[1.1] brightness-[0.9]"
                   loading="eager"
                 />
                 
-                <!-- Floating Editorial Badge -->
                 <div class="absolute bottom-5 left-5 right-5 p-4 rounded-lg bg-[#142B45]/90 backdrop-blur-md border border-white/15 text-white">
                   <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-md bg-[#C5A46D]/20 border border-[#C5A46D]/50 flex items-center justify-center shrink-0">
@@ -166,15 +159,7 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 2 – TRUST & CORPORATE EXPERTISE
-         Elegant Horizontal Information Layout:
-         1. Governance Expertise
-         2. Compliance Focus
-         3. Risk Awareness
-         4. Strategic Advisory
-         (Linear horizontal ledger ribbon, distinct from card grids)
-         ========================================== -->
+   
     <section class="py-16 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Trust and Corporate Expertise">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -191,10 +176,8 @@
           </div>
         </div>
 
-        <!-- Horizontal Information Ribbon -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-[#E2E8F0] dark:border-[#344454]">
           
-          <!-- Column 1: Governance Expertise -->
           <div class="py-8 pr-6 sm:px-6 border-b sm:border-b-0 sm:border-r border-[#E2E8F0] dark:border-[#344454] rtl:border-l rtl:border-r-0 flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -211,7 +194,6 @@
             </div>
           </div>
 
-          <!-- Column 2: Compliance Focus -->
           <div class="py-8 pr-6 sm:px-6 border-b sm:border-b-0 sm:border-r border-[#E2E8F0] dark:border-[#344454] rtl:border-l rtl:border-r-0 flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -228,7 +210,6 @@
             </div>
           </div>
 
-          <!-- Column 3: Risk Awareness -->
           <div class="py-8 pr-6 sm:px-6 border-b sm:border-b-0 sm:border-r border-[#E2E8F0] dark:border-[#344454] rtl:border-l rtl:border-r-0 flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -245,7 +226,6 @@
             </div>
           </div>
 
-          <!-- Column 4: Strategic Advisory -->
           <div class="py-8 pr-6 sm:px-6 flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -267,22 +247,15 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 3 – OUR ADVISORY PHILOSOPHY
-         Asymmetric Editorial Layout:
-         - New unique architectural corporate imagery (no repetition).
-         - Narrative: Moving from defensive checklists to enterprise momentum.
-         - 3 core tenets of modern governance philosophy.
-         ========================================== -->
+
     <section id="philosophy" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Advisory Philosophy">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          <!-- Left Column: Editorial Photo with Architectural Presence (5 Cols) -->
           <div class="lg:col-span-5 relative order-2 lg:order-1">
             <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-[#E2E8F0] dark:border-[#344454]">
               <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+                src="assets/images/advisory.avif" 
                 alt="Modern corporate architectural headquarters reflecting governance excellence" 
                 class="w-full h-[520px] object-cover filter contrast-[1.05]"
                 loading="lazy"
@@ -301,7 +274,6 @@
             </div>
           </div>
 
-          <!-- Right Column: Philosophy Narrative (7 Cols) -->
           <div class="lg:col-span-7 order-1 lg:order-2">
             <div class="gold-badge mb-4">
               <i data-lucide="compass" class="w-3.5 h-3.5"></i>
@@ -318,7 +290,6 @@
 
             <div class="space-y-6">
               
-              <!-- Principle 1: Proactive Rather Than Reactive -->
               <div class="p-5 rounded-xl bg-white dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-sm">
                 <div class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
@@ -333,7 +304,6 @@
                 </div>
               </div>
 
-              <!-- Principle 2: Value Creation Through Compliance -->
               <div class="p-5 rounded-xl bg-white dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-sm">
                 <div class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
@@ -348,7 +318,6 @@
                 </div>
               </div>
 
-              <!-- Principle 3: Long-Term Resilience -->
               <div class="p-5 rounded-xl bg-white dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-sm">
                 <div class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-lg bg-[#C5A46D]/15 text-[#C5A46D] flex items-center justify-center shrink-0 mt-0.5">
@@ -381,12 +350,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 4 – GOVERNANCE & COMPLIANCE SOLUTIONS
-         Alternating Horizontal Service Blocks:
-         - Disciplinary focus, key deliverables, and section anchors.
-         - Distinct layout compared to Home 1's vertical card grid.
-         ========================================== -->
     <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Governance and Compliance Solutions">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -403,7 +366,6 @@
 
         <div class="space-y-12">
           
-          <!-- Block 1: Corporate & Board Governance -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-10 rounded-2xl bg-[#F8F9FA] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-sm">
             <div class="lg:col-span-7">
               <span class="text-xs uppercase tracking-widest text-[#C5A46D] font-bold block mb-2">Discipline 01 &bull; Boardroom Architecture</span>
@@ -438,7 +400,7 @@
             </div>
             <div class="lg:col-span-5">
               <img 
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/boardroom.avif" 
                 alt="Corporate board meeting in modern executive office" 
                 class="w-full h-64 sm:h-72 object-cover rounded-xl shadow-md border border-[#E2E8F0] dark:border-[#344454]"
                 loading="lazy"
@@ -446,11 +408,10 @@
             </div>
           </div>
 
-          <!-- Block 2: Regulatory Compliance & Frameworks -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-8 sm:p-10 rounded-2xl bg-[#F8F9FA] dark:bg-[#1D2B38] border border-[#E2E8F0] dark:border-[#344454] shadow-sm">
             <div class="lg:col-span-5 order-2 lg:order-1">
               <img 
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/cross.avif" 
                 alt="Regulatory compliance documentation and legal analysis" 
                 class="w-full h-64 sm:h-72 object-cover rounded-xl shadow-md border border-[#E2E8F0] dark:border-[#344454]"
                 loading="lazy"
@@ -524,7 +485,7 @@
             </div>
             <div class="lg:col-span-5">
               <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
+                src="assets/images/audit.avif" 
                 alt="Audit preparation dashboards and financial data analytics" 
                 class="w-full h-64 sm:h-72 object-cover rounded-xl shadow-md border border-[#E2E8F0] dark:border-[#344454]"
                 loading="lazy"
@@ -544,15 +505,7 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 5 – OUR WORKING FRAMEWORK
-         Visual 5-Stage Timeline Framework:
-         Stage 1: Understand
-         Stage 2: Assess
-         Stage 3: Strategize
-         Stage 4: Implement
-         Stage 5: Review
-         ========================================== -->
+    
     <section class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Working Framework">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -567,10 +520,8 @@
           </p>
         </div>
 
-        <!-- 5-Stage Connected Horizontal Process Timeline -->
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           
-          <!-- Stage 1 -->
           <div class="timeline-step flex flex-col items-center text-center">
             <div class="w-16 h-16 rounded-2xl bg-white dark:bg-[#1D2B38] border-2 border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] flex items-center justify-center mb-6 shadow-md z-10">
               <i data-lucide="search" class="w-7 h-7 text-[#C5A46D]"></i>
@@ -582,7 +533,6 @@
             </p>
           </div>
 
-          <!-- Stage 2 -->
           <div class="timeline-step flex flex-col items-center text-center">
             <div class="w-16 h-16 rounded-2xl bg-white dark:bg-[#1D2B38] border-2 border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] flex items-center justify-center mb-6 shadow-md z-10">
               <i data-lucide="clipboard-check" class="w-7 h-7 text-[#C5A46D]"></i>
@@ -594,7 +544,6 @@
             </p>
           </div>
 
-          <!-- Stage 3 -->
           <div class="timeline-step flex flex-col items-center text-center">
             <div class="w-16 h-16 rounded-2xl bg-white dark:bg-[#1D2B38] border-2 border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] flex items-center justify-center mb-6 shadow-md z-10">
               <i data-lucide="file-text" class="w-7 h-7 text-[#C5A46D]"></i>
@@ -606,7 +555,6 @@
             </p>
           </div>
 
-          <!-- Stage 4 -->
           <div class="timeline-step flex flex-col items-center text-center">
             <div class="w-16 h-16 rounded-2xl bg-white dark:bg-[#1D2B38] border-2 border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] flex items-center justify-center mb-6 shadow-md z-10">
               <i data-lucide="sliders" class="w-7 h-7 text-[#C5A46D]"></i>
@@ -618,7 +566,6 @@
             </p>
           </div>
 
-          <!-- Stage 5 -->
           <div class="timeline-step flex flex-col items-center text-center">
             <div class="w-16 h-16 rounded-2xl bg-white dark:bg-[#1D2B38] border-2 border-[#C5A46D] text-[#142B45] dark:text-[#F3F5F7] flex items-center justify-center mb-6 shadow-md z-10">
               <i data-lucide="refresh-cw" class="w-7 h-7 text-[#C5A46D]"></i>
@@ -635,16 +582,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 6 – INDUSTRY EXPERTISE
-         Image-based grid for 6 target sectors:
-         1. Financial Services
-         2. Manufacturing
-         3. Healthcare
-         4. Technology
-         5. Retail
-         6. Corporate Enterprises
-         ========================================== -->
     <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Industry Expertise">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -663,10 +600,9 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <!-- Sector 1: Financial Services -->
           <div class="industry-card h-80 rounded-2xl relative shadow-md group">
             <img 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+              src="assets/images/financial.jpeg" 
               alt="Financial banking towers and capital markets infrastructure" 
               class="w-full h-full object-cover filter brightness-[0.4] group-hover:brightness-[0.3]"
               loading="lazy"
@@ -685,10 +621,9 @@
             </div>
           </div>
 
-          <!-- Sector 2: Manufacturing -->
           <div class="industry-card h-80 rounded-2xl relative shadow-md group">
             <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+              src="assets/images/manufacture-2.jpeg" 
               alt="Advanced manufacturing line with strict statutory safety protocols" 
               class="w-full h-full object-cover filter brightness-[0.4] group-hover:brightness-[0.3]"
               loading="lazy"
@@ -707,10 +642,9 @@
             </div>
           </div>
 
-          <!-- Sector 3: Healthcare -->
           <div class="industry-card h-80 rounded-2xl relative shadow-md group">
             <img 
-              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" 
+              src="assets/images/health-2.jpeg" 
               alt="Medical laboratory and pharmaceutical governance" 
               class="w-full h-full object-cover filter brightness-[0.4] group-hover:brightness-[0.3]"
               loading="lazy"
@@ -729,10 +663,9 @@
             </div>
           </div>
 
-          <!-- Sector 4: Technology -->
           <div class="industry-card h-80 rounded-2xl relative shadow-md group">
             <img 
-              src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" 
+              src="assets/images/technology.avif" 
               alt="Cybersecurity matrix and enterprise technology systems" 
               class="w-full h-full object-cover filter brightness-[0.4] group-hover:brightness-[0.3]"
               loading="lazy"
@@ -754,7 +687,7 @@
           <!-- Sector 5: Retail -->
           <div class="industry-card h-80 rounded-2xl relative shadow-md group">
             <img 
-              src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" 
+              src="assets/images/retail-2.jpeg" 
               alt="Modern consumer logistics and retail operations" 
               class="w-full h-full object-cover filter brightness-[0.4] group-hover:brightness-[0.3]"
               loading="lazy"
@@ -776,7 +709,7 @@
           <!-- Sector 6: Corporate Enterprises -->
           <div class="industry-card h-80 rounded-2xl relative shadow-md group">
             <img 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+              src="assets/images/corporate-2.jpeg" 
               alt="Multi-national corporate enterprise headquarters" 
               class="w-full h-full object-cover filter brightness-[0.4] group-hover:brightness-[0.3]"
               loading="lazy"
@@ -800,13 +733,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 7 – INSIGHTS & CASE STUDIES
-         Split Editorial Section:
-         - Left: Featured Case Study
-         - Right: Latest Governance Insights
-         - Direct navigation buttons to Case Studies and Insights pages.
-         ========================================== -->
     <section class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Editorial Insights and Case Studies">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -832,7 +758,7 @@
             <div>
               <div class="relative h-64 rounded-xl overflow-hidden mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=80" 
+                  src="assets/images/meeting.avif" 
                   alt="Banking institution board governance case study" 
                   class="w-full h-full object-cover"
                   loading="lazy"
@@ -862,10 +788,8 @@
             </div>
           </div>
 
-          <!-- Right Side: Two Latest Insights Articles (6 Cols) -->
           <div class="lg:col-span-6 flex flex-col justify-between space-y-6">
             
-            <!-- Insight 1 -->
             <article class="p-8 rounded-2xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-xs text-[#718096] dark:text-[#A5B1BE] mb-3">
@@ -895,7 +819,6 @@
               </div>
             </article>
 
-            <!-- Insight 2 -->
             <article class="p-8 rounded-2xl bg-white dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454] shadow-sm flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between text-xs text-[#718096] dark:text-[#A5B1BE] mb-3">
@@ -932,12 +855,7 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 8 – FINAL CTA AND FOOTER
-         Headline: Let’s Create a Stronger Governance Framework.
-         Buttons: Contact Our Experts | Explore Our Services
-         Editorial Asymmetric Layout
-         ========================================== -->
+
     <section class="relative py-20 sm:py-28 bg-[#142B45] text-white overflow-hidden" aria-label="Editorial Call to Action">
       <div class="absolute inset-0 z-0">
         <div class="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-[#C5A46D]/15 blur-3xl pointer-events-none"></div>
@@ -1004,7 +922,6 @@
 
   </main>
 
-  <!-- COMMON FOOTER (Injected dynamically from footer.html via JS) -->
   <div id="footer-placeholder"></div>
 
 </body>

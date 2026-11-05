@@ -48,7 +48,6 @@
                   <span>Home 1</span>
                   <span class="text-[10px] text-[#718096] dark:text-[#A5B1BE] font-normal">Traditional Corporate Advisory</span>
                 </div>
-                <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-[#C5A46D]/15 text-[#C5A46D] font-bold">Classic</span>
               </a>
               <div class="border-t border-[#E2E8F0] dark:border-[#344454]/60 my-1"></div>
               <a href="home-2.html" class="dropdown-item flex items-center justify-between px-4 py-2.5 text-xs font-semibold text-[#253448] dark:text-[#F3F5F7] hover:bg-[#F4F6F8] dark:hover:bg-[#182430] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors" role="menuitem">
@@ -56,7 +55,6 @@
                   <span>Home 2</span>
                   <span class="text-[10px] text-[#718096] dark:text-[#A5B1BE] font-normal">Modern Editorial Layout</span>
                 </div>
-                <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold">Editorial</span>
               </a>
             </div>
           </div>
@@ -231,18 +229,18 @@
       <div class="hidden xl:flex items-center space-x-3 rtl:space-x-reverse">
         <!-- Dark/Light Theme Toggle (Dual Pill: Sun & Moon always visible) -->
         <button type="button" class="theme-toggle-btn h-9 w-[88px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#F4F6F8] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold hover:border-[#C5A46D] transition-colors focus:outline-none cursor-pointer" aria-label="Toggle Dark/Light theme" title="Toggle theme">
-          <span class="theme-light-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all" title="Light Mode">
-            <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+          <span class="theme-light-indicator active flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm" title="Light Mode">
+            <svg class="w-3.5 h-3.5 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
           </span>
-          <span class="theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all" title="Dark Mode">
-            <i data-lucide="moon" class="w-3.5 h-3.5"></i>
+          <span class="theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium" title="Dark Mode">
+            <svg class="w-3.5 h-3.5 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
           </span>
         </button>
 
         <!-- LTR / RTL Toggle (Exact Match Size) -->
         <button type="button" class="direction-toggle-btn h-9 w-[88px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#F4F6F8] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold hover:border-[#C5A46D] transition-colors focus:outline-none cursor-pointer" aria-label="Toggle layout direction" title="Toggle LTR / RTL">
-          <span class="dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all">LTR</span>
-          <span class="dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all">RTL</span>
+          <span class="dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm" title="Left to Right">LTR</span>
+          <span class="dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium" title="Right to Left">RTL</span>
         </button>
 
         <!-- Get In Touch CTA -->
@@ -274,14 +272,15 @@
       <!-- Drawer Header -->
       <div class="flex items-center justify-between pb-6 border-b border-[#E2E8F0] dark:border-[#344454]">
         <div class="flex items-center gap-3">
-          <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none">
+          <svg class="w-8 h-8 shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M34 10H18C13.5817 10 10 13.5817 10 18V30C10 34.4183 13.5817 38 18 38H34" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" class="text-[#142B45] dark:text-[#F3F5F7]" />
             <path d="M22 14L31 34L40 14" stroke="#C5A46D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
             <circle cx="31" cy="20" r="2.2" fill="#C5A46D" />
           </svg>
           <span class="font-serif font-bold text-xl text-[#142B45] dark:text-[#F3F5F7] tracking-[0.16em]">CORVANTIS</span>
         </div>
-        <button type="button" id="mobile-menu-close" class="w-10 h-10 rounded-lg border border-[#E2E8F0] dark:border-[#344454] bg-[#F4F6F8] dark:bg-[#1D2B38] flex items-center justify-center text-[#718096] hover:text-[#142B45] dark:hover:text-white transition-colors cursor-pointer" aria-label="Close menu">
+        <!-- Close Menu Button -->
+        <button type="button" id="mobile-menu-close" class="w-9 h-9 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#F4F6F8] dark:bg-[#1D2B38] flex items-center justify-center text-[#718096] dark:text-[#A5B1BE] hover:text-[#142B45] dark:hover:text-white transition-colors cursor-pointer" aria-label="Close menu">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
@@ -292,25 +291,23 @@
         <div class="mobile-dropdown-container border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 pb-3">
           <button type="button" 
                   id="mobile-home-toggle"
-                  class="mobile-nav-link w-full flex items-center justify-between font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-2 cursor-pointer"
+                  class="mobile-nav-link w-full flex items-center justify-between font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] transition-colors py-2 cursor-pointer"
                   aria-expanded="false" 
                   aria-controls="mobile-home-submenu">
             <span class="flex items-center gap-3">Home</span>
             <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200 mobile-arrow text-[#C5A46D]"></i>
           </button>
           <div id="mobile-home-submenu" class="hidden flex-col pl-4 rtl:pr-4 rtl:pl-0 space-y-2 mt-2 mb-2 border-l-2 rtl:border-r-2 rtl:border-l-0 border-[#C5A46D]">
-            <a href="index.html" class="mobile-sublink flex items-center justify-between text-sm sm:text-base font-medium text-[#718096] dark:text-[#A5B1BE] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] py-1.5 transition-colors">
+            <a href="index.html" class="mobile-sublink block text-sm sm:text-base font-medium text-[#718096] dark:text-[#A5B1BE] py-1.5 transition-colors">
               <span>Home 1 – Corporate Advisory</span>
-              <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-[#C5A46D]/15 text-[#C5A46D] font-bold">Classic</span>
             </a>
-            <a href="home-2.html" class="mobile-sublink flex items-center justify-between text-sm sm:text-base font-medium text-[#718096] dark:text-[#A5B1BE] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] py-1.5 transition-colors">
+            <a href="home-2.html" class="mobile-sublink block text-sm sm:text-base font-medium text-[#718096] dark:text-[#A5B1BE] py-1.5 transition-colors">
               <span>Home 2 – Modern Editorial</span>
-              <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-blue-500/10 text-blue-500 dark:text-blue-400 font-bold">Editorial</span>
             </a>
           </div>
         </div>
 
-        <a href="about.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+        <a href="about.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
           <span>About Us</span>
           <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
         </a>
@@ -318,7 +315,7 @@
         <div class="mobile-dropdown-container border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 pb-3">
           <button type="button" 
                   id="mobile-services-toggle"
-                  class="mobile-nav-link w-full flex items-center justify-between font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-2 cursor-pointer"
+                  class="mobile-nav-link w-full flex items-center justify-between font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] transition-colors py-2 cursor-pointer"
                   aria-expanded="false" 
                   aria-controls="mobile-services-submenu">
             <span class="flex items-center gap-3">Services</span>
@@ -335,10 +332,10 @@
             <div>
               <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A46D] block mb-1">Governance &amp; Board</span>
               <div class="space-y-1.5 pl-2 rtl:pr-2 rtl:pl-0">
-                <a href="services/corporate-governance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Corporate Governance</a>
-                <a href="services/board-governance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Board Governance</a>
-                <a href="services/board-effectiveness.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Board Effectiveness</a>
-                <a href="services/leadership-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Leadership Advisory</a>
+                <a href="services/corporate-governance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Corporate Governance</a>
+                <a href="services/board-governance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Board Governance</a>
+                <a href="services/board-effectiveness.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Board Effectiveness</a>
+                <a href="services/leadership-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Leadership Advisory</a>
               </div>
             </div>
 
@@ -346,10 +343,10 @@
             <div>
               <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A46D] block mb-1">Compliance &amp; Audit</span>
               <div class="space-y-1.5 pl-2 rtl:pr-2 rtl:pl-0">
-                <a href="services/regulatory-compliance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Regulatory Compliance</a>
-                <a href="services/audit-preparation.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Audit Preparation</a>
-                <a href="services/compliance-reporting.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Compliance Reporting</a>
-                <a href="services/documentation-support.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Documentation Support</a>
+                <a href="services/regulatory-compliance.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Regulatory Compliance</a>
+                <a href="services/audit-preparation.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Audit Preparation</a>
+                <a href="services/compliance-reporting.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Compliance Reporting</a>
+                <a href="services/documentation-support.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Documentation Support</a>
               </div>
             </div>
 
@@ -357,24 +354,24 @@
             <div>
               <span class="text-[10px] font-bold uppercase tracking-wider text-[#C5A46D] block mb-1">Risk &amp; Advisory</span>
               <div class="space-y-1.5 pl-2 rtl:pr-2 rtl:pl-0">
-                <a href="services/risk-management.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Risk Management</a>
-                <a href="services/internal-audit.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Internal Audit</a>
-                <a href="services/business-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Business Advisory</a>
-                <a href="services/strategic-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] hover:text-[#C5A46D] py-0.5">Strategic Advisory</a>
+                <a href="services/risk-management.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Risk Management</a>
+                <a href="services/internal-audit.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Internal Audit</a>
+                <a href="services/business-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Business Advisory</a>
+                <a href="services/strategic-advisory.html" class="mobile-sublink block text-sm font-medium text-[#253448] dark:text-[#F3F5F7] py-0.5">Strategic Advisory</a>
               </div>
             </div>
 
           </div>
         </div>
-        <a href="case-studies.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+        <a href="case-studies.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
           <span>Case Studies</span>
           <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
         </a>
-        <a href="insights.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+        <a href="insights.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
           <span>Insights</span>
           <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
         </a>
-        <a href="contact.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] hover:text-[#C5A46D] dark:hover:text-[#C5A46D] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
+        <a href="contact.html" class="mobile-nav-link font-serif text-xl sm:text-2xl font-bold text-[#142B45] dark:text-[#F3F5F7] transition-colors py-3 border-b border-[#E2E8F0]/70 dark:border-[#344454]/70 flex items-center justify-between">
           <span>Contact Us</span>
           <i data-lucide="arrow-right" class="w-4 h-4 text-[#C5A46D] rtl-flip opacity-70"></i>
         </a>
@@ -382,33 +379,37 @@
     </div>
 
     <!-- Drawer Footer Controls (Theme, Direction & CTA) -->
-    <div class="pt-6 pb-6 border-t border-[#E2E8F0] dark:border-[#344454] space-y-4 mb-4">
-      <div class="grid grid-cols-2 gap-4">
-        <!-- THEME MODE TOGGLE -->
-        <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454]">
-          <span class="text-xs uppercase font-semibold text-[#718096] dark:text-[#A5B1BE] tracking-wider">Theme</span>
-          <button type="button" class="theme-toggle-btn w-[88px] h-[34px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#FFFFFF] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold focus:outline-none cursor-pointer" aria-label="Toggle Dark/Light theme">
-            <span class="theme-light-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all" title="Light Mode">
-              <i data-lucide="sun" class="w-3.5 h-3.5"></i>
-            </span>
-            <span class="theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all" title="Dark Mode">
-              <i data-lucide="moon" class="w-3.5 h-3.5"></i>
-            </span>
-          </button>
+    <div class="pt-5 pb-6 border-t border-[#E2E8F0] dark:border-[#344454] space-y-3 mb-2">
+      <!-- THEME MODE ROW -->
+      <div class="drawer-control-box flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454]">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#C5A46D] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <span class="drawer-control-label text-xs uppercase font-bold text-[#142B45] dark:text-[#F3F5F7] tracking-wider">Theme</span>
         </div>
+        <button type="button" class="theme-toggle-btn w-[92px] h-[34px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#FFFFFF] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold focus:outline-none cursor-pointer shrink-0" aria-label="Toggle Dark/Light theme" title="Toggle theme">
+          <span class="theme-light-indicator active flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm" title="Light Mode">
+            <svg class="w-3.5 h-3.5 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          </span>
+          <span class="theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium" title="Dark Mode">
+            <svg class="w-3.5 h-3.5 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </span>
+        </button>
+      </div>
 
-        <!-- DIRECTION TOGGLE (LTR / RTL) -->
-        <div class="flex items-center justify-between p-2.5 rounded-lg bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454]">
-          <span class="text-xs uppercase font-semibold text-[#718096] dark:text-[#A5B1BE] tracking-wider">Layout</span>
-          <button type="button" class="direction-toggle-btn w-[88px] h-[34px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#FFFFFF] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold focus:outline-none cursor-pointer" aria-label="Toggle layout direction" title="Toggle LTR / RTL">
-            <span class="dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all">LTR</span>
-            <span class="dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium transition-all">RTL</span>
-          </button>
+      <!-- DIRECTION ROW -->
+      <div class="drawer-control-box flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-[#F8F9FA] dark:bg-[#182430] border border-[#E2E8F0] dark:border-[#344454]">
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#C5A46D] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+          <span class="drawer-control-label text-xs uppercase font-bold text-[#142B45] dark:text-[#F3F5F7] tracking-wider">Layout</span>
         </div>
+        <button type="button" class="direction-toggle-btn w-[92px] h-[34px] p-0.5 rounded-md border border-[#E2E8F0] dark:border-[#344454] bg-[#FFFFFF] dark:bg-[#1D2B38] grid grid-cols-2 text-xs font-semibold focus:outline-none cursor-pointer shrink-0" aria-label="Toggle layout direction" title="Toggle LTR / RTL">
+          <span class="dir-ltr-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm" title="Left to Right">LTR</span>
+          <span class="dir-rtl-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium" title="Right to Left">RTL</span>
+        </button>
       </div>
 
       <!-- GET IN TOUCH CTA -->
-      <a href="contact.html" class="btn-gold w-full text-center py-3.5 text-xs uppercase tracking-wider justify-center shadow-md font-bold">
+      <a href="contact.html" class="btn-gold w-full text-center py-3.5 text-xs uppercase tracking-wider justify-center shadow-md font-bold mt-2">
         <span>Get in Touch</span>
         <i data-lucide="arrow-up-right" class="w-4 h-4 rtl-flip"></i>
       </a>

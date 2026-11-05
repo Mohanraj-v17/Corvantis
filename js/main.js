@@ -129,14 +129,22 @@
     });
   }
 
-  // DOM Ready
-  document.addEventListener('DOMContentLoaded', () => {
+  // Expose methods globally for component loaders
+  window.corvantisRefreshIcons = initIcons;
+  window.corvantisInitBackToTop = initBackToTop;
+  window.corvantisInitAll = initAll;
+
+  // DOM Ready & Cache/Reload Guard
+  function initAll() {
     initIcons();
     initBackToTop();
     initAccordions();
     initModalHandlers();
-  });
+  }
 
-  window.corvantisRefreshIcons = initIcons;
-  window.corvantisInitBackToTop = initBackToTop;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
 })();

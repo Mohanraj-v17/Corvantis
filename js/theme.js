@@ -1,17 +1,22 @@
 /**
  * CORVANTIS - Theme Management (Light / Dark Mode)
- * Persists theme preference in localStorage and synchronizes UI toggles.
+ * Persists theme preference in localStorage and synchronizes UI toggles instantly without lag.
+ * Supports segmented control click behavior: clicking Light sets Light; clicking Dark sets Dark.
  */
 
 (function () {
   'use strict';
 
   function getPreferredTheme() {
-    const savedTheme = localStorage.getItem('corvantis_theme');
-    if (savedTheme) {
-      return savedTheme;
+    try {
+      const savedTheme = localStorage.getItem('corvantis_theme');
+      if (savedTheme) {
+        return savedTheme;
+      }
+    } catch (e) {
+      // localStorage may be restricted or unavailable in private/sandboxed modes
     }
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   }
 
   function applyTheme(theme) {
@@ -23,15 +28,16 @@
     updateThemeToggleButtons(theme);
   }
 
-  function updateThemeToggleButtons(theme) {
+  function updateThemeToggleButtons(theme, root) {
     const isDark = theme === 'dark';
-    const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+    const context = root || document;
+    const toggleBtns = context.querySelectorAll ? context.querySelectorAll('.theme-toggle-btn') : [];
 
     toggleBtns.forEach((btn) => {
       btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
       btn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
       
-      // 1. Single-icon button (Desktop header)
+      // 1. Single-icon button (Desktop header fallback)
       const sunIcon = btn.querySelector('.theme-icon-sun');
       const moonIcon = btn.querySelector('.theme-icon-moon');
       if (sunIcon && moonIcon) {
@@ -44,70 +50,86 @@
         }
       }
 
-      // 2. Dual-pill button (Both Desktop header & Mobile hamburger drawer)
+      // 2. Dual-pill button (Desktop Header, Drawer Header, Drawer Footer)
       const lightIndicator = btn.querySelector('.theme-light-indicator');
       const darkIndicator = btn.querySelector('.theme-dark-indicator');
       if (lightIndicator && darkIndicator) {
-        const lightSvg = lightIndicator.querySelector('svg, i');
-        const darkSvg = darkIndicator.querySelector('svg, i');
-        if (lightSvg) {
-          lightSvg.classList.remove('text-[#C5A46D]');
-          lightSvg.classList.add('text-current');
-        }
-        if (darkSvg) {
-          darkSvg.classList.remove('text-[#C5A46D]');
-          darkSvg.classList.add('text-current');
-        }
         if (isDark) {
-          darkIndicator.className = 'theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all';
-          lightIndicator.className = 'theme-light-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium hover:text-[#142B45] dark:hover:text-[#F3F5F7] transition-all';
+          darkIndicator.classList.add('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          darkIndicator.classList.remove('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
+          lightIndicator.classList.remove('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          lightIndicator.classList.add('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
         } else {
-          lightIndicator.className = 'theme-light-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase bg-[#C5A46D] text-white font-bold shadow-sm transition-all';
-          darkIndicator.className = 'theme-dark-indicator flex items-center justify-center h-full rounded text-[0.7rem] uppercase text-[#718096] dark:text-[#A5B1BE] font-medium hover:text-[#142B45] dark:hover:text-[#F3F5F7] transition-all';
+          lightIndicator.classList.add('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          lightIndicator.classList.remove('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
+          darkIndicator.classList.remove('active', 'bg-[#C5A46D]', 'text-white', 'shadow-sm');
+          darkIndicator.classList.add('bg-transparent', 'text-[#718096]', 'dark:text-[#A5B1BE]');
         }
       }
     });
   }
 
+  function setTheme(newTheme) {
+    const validTheme = newTheme === 'dark' ? 'dark' : 'light';
+    try {
+      localStorage.setItem('corvantis_theme', validTheme);
+    } catch (e) {
+      // localStorage may be restricted or unavailable
+    }
+    applyTheme(validTheme);
+  }
+
   function toggleTheme() {
     const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('corvantis_theme', newTheme);
-    applyTheme(newTheme);
+    setTheme(newTheme);
+  }
+
+  function handleThemeToggleEvent(e) {
+    const btn = e.target.closest('.theme-toggle-btn');
+    if (!btn) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    const lightClicked = e.target.closest('.theme-light-indicator');
+    const darkClicked = e.target.closest('.theme-dark-indicator');
+
+    if (lightClicked) {
+      setTheme('light');
+    } else if (darkClicked) {
+      setTheme('dark');
+    } else {
+      // Clicked outer border or padding: toggle
+      toggleTheme();
+    }
   }
 
   function bindThemeListeners() {
     const current = getPreferredTheme();
     applyTheme(current);
 
-    const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
-    toggleBtns.forEach((btn) => {
-      // Avoid duplicate listener bindings
-      if (!btn.dataset.themeBound) {
-        btn.dataset.themeBound = 'true';
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          toggleTheme();
-        });
-      }
-    });
+    if (!document.__themeDelegatedAttached) {
+      document.__themeDelegatedAttached = true;
+      document.addEventListener('click', handleThemeToggleEvent, true);
+    }
   }
 
-  // Initialize on DOMContentLoaded
-  document.addEventListener('DOMContentLoaded', () => {
-    bindThemeListeners();
+  // Execute synchronously immediately upon script parse
+  const initial = getPreferredTheme();
+  applyTheme(initial);
 
-    // Listen for OS theme changes if user has not set a preference
-    if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('corvantis_theme')) {
-          applyTheme(e.matches ? 'dark' : 'light');
-        }
-      });
-    }
-  });
+  // Bind event listeners when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindThemeListeners);
+  } else {
+    bindThemeListeners();
+  }
 
   // Expose globally for dynamic component loaders
   window.corvantisToggleTheme = toggleTheme;
+  window.corvantisSetTheme = setTheme;
   window.corvantisInitTheme = bindThemeListeners;
+  window.corvantisApplyTheme = applyTheme;
+  window.corvantisUpdateThemeButtons = updateThemeToggleButtons;
 })();

@@ -4,24 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Case Studies | CORVANTIS Corporate Governance &amp; Compliance Advisory</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo/corvantis-mark.svg">
+
   <meta name="description" content="Explore illustrative advisory case studies demonstrating practical governance restructurings, regulatory compliance transformations, and audit readiness frameworks.">
   
-  <!-- Immediate Theme & Direction Initialization -->
   <script>
-    (function() {
-      const savedTheme = localStorage.getItem('corvantis_theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
+    (function () {
+      try {
+        const savedTheme = localStorage.getItem('corvantis_theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
+        document.documentElement.setAttribute('dir', savedDir);
+        document.documentElement.dir = savedDir;
+        document.documentElement.setAttribute('lang', savedDir === 'rtl' ? 'ar' : 'en');
+      } catch (e) {
         document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.dir = 'ltr';
+        document.documentElement.setAttribute('lang', 'en');
       }
-      const savedDir = localStorage.getItem('corvantis_dir') || 'ltr';
-      document.documentElement.setAttribute('dir', savedDir);
-      document.documentElement.dir = savedDir;
     })();
   </script>
 
-  <!-- Google Fonts: Inter & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
@@ -57,10 +65,8 @@
     }
   </script>
 
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Production Scripts -->
@@ -70,20 +76,16 @@
   <script src="js/validation.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
-<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] transition-colors duration-200">
+<body class="bg-[#F4F6F8] dark:bg-[#101820] text-[#253448] dark:text-[#F3F5F7] ">
 
-  <!-- COMMON NAVBAR (Injected dynamically from navbar.html via JS) -->
   <div id="navbar-placeholder"></div>
 
   <main>
-    <!-- ==========================================
-         SECTION 1: CASE STUDIES HERO
-         Headline: Practical Advisory. Meaningful Business Improvements.
-         ========================================== -->
-    <section class="relative py-20 sm:py-28 bg-[#142B45] text-white overflow-hidden" aria-label="Case Studies Hero">
+
+    <section class="relative min-h-[90vh] flex items-center bg-[#142B45] text-white overflow-hidden" aria-label="Case Studies Hero">
       <div class="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2000&q=80" 
+          src="assets/images/cross.avif" 
           alt="Advisory analysts conducting empirical corporate audit and governance research" 
           class="w-full h-full object-cover filter brightness-[0.28] contrast-[1.05]"
           loading="eager"
@@ -91,7 +93,7 @@
         <div class="absolute inset-0 hero-gradient-overlay"></div>
       </div>
 
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8 w-full text-center">
         <div class="max-w-4xl mx-auto flex flex-col items-center">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A46D]/20 border border-[#C5A46D]/40 mb-5">
             <i data-lucide="clipboard-list" class="w-3.5 h-3.5 text-[#C5A46D]"></i>
@@ -113,10 +115,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 2: INTRODUCTION
-         Explain how governance and compliance strategies support business organizations.
-         ========================================== -->
     <section class="py-20 sm:py-24 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Introduction to Case Studies">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
@@ -165,10 +163,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 3: CORPORATE GOVERNANCE CASE STUDY
-         Include: Industry, Business Challenge, Advisory Approach, Proposed Solution, Illustrative Outcome.
-         ========================================== -->
     <section id="case-governance" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Corporate Governance Case Study">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -238,10 +232,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 4: REGULATORY COMPLIANCE CASE STUDY
-         Include: Industry, Compliance Challenges, Assessment Process, Proposed Framework, Illustrative Outcome.
-         ========================================== -->
     <section id="case-compliance" class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Regulatory Compliance Case Study">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -311,10 +301,7 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 5: AUDIT PREPARATION CASE STUDY
-         Include: Business Problem, Documentation Gaps, Audit Preparation Strategy, Implementation, Illustrative Outcome.
-         ========================================== -->
+
     <section id="case-audit" class="py-20 sm:py-28 bg-[#F4F6F8] dark:bg-[#101820]" aria-label="Audit Preparation Case Study">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -384,10 +371,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 6: RESULTS AND KEY LEARNINGS
-         Highlight: Improved Governance Structure, Better Compliance Visibility, Stronger Internal Controls, Improved Documentation Practices, Better Risk Awareness.
-         ========================================== -->
     <section class="py-20 sm:py-28 bg-[#FFFFFF] dark:bg-[#182430] border-b border-[#E2E8F0] dark:border-[#344454]" aria-label="Results and Key Learnings">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -469,10 +452,6 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 7: FINAL CTA AND FOOTER
-         Headline: Let's Build a Stronger Governance Framework Together.
-         ========================================== -->
     <section class="relative py-20 sm:py-24 bg-[#142B45] text-white overflow-hidden" aria-label="Case Studies Final CTA">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#C5A46D]/20 via-transparent to-transparent pointer-events-none"></div>
 
@@ -504,7 +483,6 @@
 
   </main>
 
-  <!-- COMMON FOOTER (Injected dynamically from footer.html via JS) -->
   <div id="footer-placeholder"></div>
 
 </body>

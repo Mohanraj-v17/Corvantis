@@ -210,10 +210,18 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  function initAllValidation() {
     initEnquiryForm();
     initNewsletterForm();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAllValidation);
+  } else {
+    initAllValidation();
+  }
+
+  window.corvantisInitValidation = initAllValidation;
 
   window.corvantisToast = showToast;
 })();
